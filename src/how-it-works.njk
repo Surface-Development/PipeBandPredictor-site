@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+title: How it works
+description: Make predictions, watch the contest, score points. The full breakdown of how PipeBandPredictor works.
+permalink: /how-it-works/
+---
+
+<section class="section">
+  <div class="container" style="max-width: var(--content-max);">
+    <span class="label">How it works</span>
+    <h1 style="margin-top: var(--space-sm);">Make predictions, watch the contest, score points.</h1>
+    <p class="hero__lead">Every Grade 1 contest of the season opens for predictions in the app. Make your picks before the round closes, and earn points based on how close you are to the actual results.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="section-head"><span class="label">Step by step</span><h2>The full flow.</h2></div>
+    <ol class="steps">
+      <li class="step">
+        <h3>Open the round</h3>
+        <p>Each contest appears in the app a few days before the event. You'll see the band list and the prediction groups (e.g. main band contest, drumming).</p>
+      </li>
+      <li class="step">
+        <h3>Rank your picks</h3>
+        <p>Drag and drop bands into the order you think they'll finish. You can change your mind any time before the round closes.</p>
+      </li>
+      <li class="step">
+        <h3>Watch and score</h3>
+        <p>Predictions lock when the round closes. After the event, official results are entered and your score is calculated automatically.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: var(--content-max);">
+    <div class="scoring">
+      <span class="label">Scoring rules</span>
+      <h2>How points are awarded.</h2>
+      <p style="margin-top: var(--space-md);">Different contests announce different numbers of positions. The scoring rules adapt automatically — here's what to expect.</p>
+
+      <h3 style="margin-top: var(--space-xl);">Single-winner rounds</h3>
+      <p>Some prediction groups have just one winner (e.g. solo piping finals). For these:</p>
+      <ul style="list-style: disc; padding-left: var(--space-xl); color: var(--color-text-muted);">
+        <li><strong>2 points</strong> — you picked the eventual winner.</li>
+      </ul>
+
+      <h3 style="margin-top: var(--space-xl);">Multi-position rounds</h3>
+      <p>Most band contests have multiple announced positions (top 6, top 4, etc.). For these:</p>
+      <ul style="list-style: disc; padding-left: var(--space-xl); color: var(--color-text-muted);">
+        <li><strong>3 points</strong> — exact position match (you predicted Inveraray would come 2nd, and they came 2nd).</li>
+        <li><strong>1 point</strong> — correct band, wrong position (you predicted Inveraray would come 4th, but they came 2nd).</li>
+      </ul>
+
+      <h3 style="margin-top: var(--space-xl);">Worked example</h3>
+      <p>Imagine the British Championships top 6 ends up as: 1. SLOT, 2. Inveraray, 3. Field Marshall, 4. Boghall, 5. ScottishPower, 6. Glasgow Skye.</p>
+      <p>Your prediction was: 1. SLOT, 2. Field Marshall, 3. Inveraray, 4. Boghall, 5. ScottishPower, 6. Police Scotland Fife.</p>
+      <ul style="list-style: disc; padding-left: var(--space-xl); color: var(--color-text-muted);">
+        <li>SLOT 1st → <strong>3 pts</strong> (exact)</li>
+        <li>Field Marshall (you said 2nd, they came 3rd) → <strong>1 pt</strong></li>
+        <li>Inveraray (you said 3rd, they came 2nd) → <strong>1 pt</strong></li>
+        <li>Boghall 4th → <strong>3 pts</strong> (exact)</li>
+        <li>ScottishPower 5th → <strong>3 pts</strong> (exact)</li>
+        <li>Police Scotland Fife — not in the top 6 → <strong>0 pts</strong></li>
+      </ul>
+      <p><strong>Total: 11 points.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: var(--content-max);">
+    <span class="label">Leagues</span>
+    <h2>Compete with friends.</h2>
+    <p style="margin-top: var(--space-md);">Beyond the global leaderboard, you can create or join private leagues to compete with a smaller group — your fellow band members, your social-media circle, or your family.</p>
+    <p>Each league has a 7-character invite code. Share the code (or the invite link) and anyone with the app can join.</p>
+    <p><em>Note: invite links via web are coming back in a future app update — for now, share the code directly inside the app.</em></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="text-align: center;">
+    <h2>Get the app.</h2>
+    <div style="display: flex; justify-content: center; margin-top: var(--space-xl);">
+      {% include "partials/store-buttons.njk" %}
+    </div>
+  </div>
+</section>
