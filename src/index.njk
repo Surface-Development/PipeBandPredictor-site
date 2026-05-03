@@ -4,6 +4,23 @@ title: ""
 description: "The prediction game for Grade 1 pipe band championships. Pick your podium, climb the leaderboard, beat your friends."
 ---
 
+{% block jsonLd %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ site.name }}",
+  "description": "{{ site.tagline }}",
+  "applicationCategory": "SportsApplication",
+  "operatingSystem": "iOS, Android",
+  "url": "{{ site.url }}",
+  "installUrl": "{{ site.appStore.ios }}",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+  "author": { "@type": "Organization", "name": "{{ site.company }}", "url": "{{ site.companyUrl }}" }
+}
+</script>
+{% endblock %}
+
 <!-- HERO -->
 <section class="hero">
   <div class="container hero__grid">

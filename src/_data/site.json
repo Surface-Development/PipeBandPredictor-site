@@ -13,5 +13,6 @@
     "android": null,
     "androidAvailable": false
   },
-  "ogImage": "/assets/img/og/pipe-band-predictor.png"
+  "ogImage": "/assets/img/og/pipe-band-predictor.png",
+  "cloudflareAnalyticsToken": ""
 }

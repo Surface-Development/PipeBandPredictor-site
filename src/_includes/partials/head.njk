@@ -18,3 +18,9 @@
 <link rel="stylesheet" href="/assets/css/components.css">
 
 {% include "partials/og.njk" %}
+
+{% block jsonLd %}{% endblock %}
+
+{% if site.cloudflareAnalyticsToken %}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflareAnalyticsToken }}"}'></script>
+{% endif %}
