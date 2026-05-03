@@ -1,0 +1,5 @@
+# Universal-link invite landing — rewrite (200), not redirect, so URL stays intact
+/invite/* /invite/index.html 200
+
+# www → apex
+https://www.pipebandpredictor.com/* https://pipebandpredictor.com/:splat 301!
