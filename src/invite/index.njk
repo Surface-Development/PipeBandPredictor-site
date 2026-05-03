@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Join a league
+description: You've been invited to a PipeBandPredictor league. Get the app to join.
+permalink: /invite/index.html
+eleventyExcludeFromCollections: true
+---
+
+<section class="invite">
+  <div class="invite__card">
+    <span class="label">League invite</span>
+    <h1 style="font-size: 1.5rem; margin-top: var(--space-sm);">Join the league.</h1>
+    <p>You've been invited to a private league in {{ site.name }}.</p>
+
+    <p style="margin-top: var(--space-lg);">Your invite code:</p>
+    <div data-invite-code class="invite__code" hidden></div>
+    <button data-invite-copy class="btn btn--ghost" type="button">Copy code</button>
+    <p class="invite__copy-status" data-invite-status></p>
+
+    <hr style="border: 0; border-top: 1px solid var(--color-border); margin: var(--space-2xl) 0;">
+
+    <h2 style="font-size: 1.125rem;">Don't have the app yet?</h2>
+    <p style="font-size: 0.9375rem; margin-top: var(--space-sm);">Download {{ site.name }} below, then enter your invite code in the Leagues tab.</p>
+
+    <div class="hero__ctas" style="justify-content: center; margin-top: var(--space-lg);">
+      {% if site.appStore.iosAvailable %}
+        <a data-invite-cta="ios" href="{{ site.appStore.ios }}" class="btn btn--ghost" rel="noopener">App Store</a>
+      {% else %}
+        <span data-invite-cta="ios" class="btn btn--ghost" aria-disabled="true">App Store · soon</span>
+      {% endif %}
+      {% if site.appStore.androidAvailable %}
+        <a data-invite-cta="android" href="{{ site.appStore.android }}" class="btn btn--ghost" rel="noopener">Play Store</a>
+      {% else %}
+        <span data-invite-cta="android" class="btn btn--ghost" aria-disabled="true">Play Store · soon</span>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% block extraScripts %}
+<script type="module" src="/assets/js/invite.js"></script>
+{% endblock %}

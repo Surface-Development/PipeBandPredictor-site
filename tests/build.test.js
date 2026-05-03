@@ -48,4 +48,25 @@ describe('Eleventy build', () => {
   it('produces a 404 page', () => {
     expect(existsSync('_site/404.html')).toBe(true);
   });
+
+  it('publishes apple-app-site-association at /.well-known/', () => {
+    const path = '_site/.well-known/apple-app-site-association';
+    expect(existsSync(path)).toBe(true);
+    const json = JSON.parse(readFileSync(path, 'utf-8'));
+    expect(json.applinks.details[0].appID).toBe('2DGK7F9D85.com.surfacedevelopment.pipebandpredictor');
+    expect(json.applinks.details[0].paths).toContain('/invite/*');
+  });
+
+  it('publishes assetlinks.json at /.well-known/', () => {
+    const path = '_site/.well-known/assetlinks.json';
+    expect(existsSync(path)).toBe(true);
+    const json = JSON.parse(readFileSync(path, 'utf-8'));
+    expect(json[0].target.package_name).toBe('com.pipebandpredictor.app');
+  });
+
+  it('produces invite landing at /invite/index.html', () => {
+    expect(existsSync('_site/invite/index.html')).toBe(true);
+    const html = readFileSync('_site/invite/index.html', 'utf-8');
+    expect(html).toContain('data-invite-code');
+  });
 });
