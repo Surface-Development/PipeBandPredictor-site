@@ -1,0 +1,27 @@
+{
+  "name": "pipebandpredictor-site",
+  "version": "0.1.0",
+  "description": "Marketing site for PipeBandPredictor (pipebandpredictor.com)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "eleventy --serve --quiet",
+    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write \"**/*.{js,njk,json,md,css}\"",
+    "format:check": "prettier --check \"**/*.{js,njk,json,md,css}\""
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "@sanity/client": "^6.21.0",
+    "happy-dom": "^15.0.0",
+    "prettier": "^3.3.0",
+    "vitest": "^2.1.0"
+  }
+}
