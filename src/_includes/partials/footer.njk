@@ -1,1 +1,37 @@
-<!-- footer placeholder until Task 9 -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="/" class="nav__brand"><img src="/assets/img/logo.svg" alt="" width="28" height="28"><span>{{ site.shortName }}</span></a>
+        <p style="margin-top: var(--space-md); font-size: 0.875rem;">Built by <a href="{{ site.companyUrl }}">{{ site.company }}</a>.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          {% for item in nav %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/data-deletion/">Data Deletion</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:{{ site.supportEmail }}">{{ site.supportEmail }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span id="copyright-year"></span> {{ site.company }}</span>
+      <span>Made in the United Kingdom</span>
+    </div>
+  </div>
+  <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+</footer>

@@ -1,0 +1,17 @@
+<div class="hero__ctas">
+  {% if site.appStore.iosAvailable %}
+    <a href="{{ site.appStore.ios }}" class="btn btn--primary" rel="noopener">
+      Download for iOS
+    </a>
+  {% else %}
+    <span class="btn btn--primary" aria-disabled="true">App Store · soon</span>
+  {% endif %}
+
+  {% if site.appStore.androidAvailable %}
+    <a href="{{ site.appStore.android }}" class="btn btn--ghost" rel="noopener">
+      Get it on Google Play
+    </a>
+  {% else %}
+    <span class="btn btn--ghost" aria-disabled="true">Play Store · soon</span>
+  {% endif %}
+</div>
