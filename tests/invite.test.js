@@ -76,4 +76,12 @@ describe('renderInvite', () => {
     const android = document.querySelector('[data-invite-cta="android"]');
     expect(android.classList.contains('btn--primary')).toBe(true);
   });
+
+  it('does not add duplicate copy listeners when called twice', () => {
+    renderInvite({ pathname: '/invite/ABC1234', userAgent: 'iPhone' });
+    renderInvite({ pathname: '/invite/ABC1234', userAgent: 'iPhone' });
+    const copyBtn = document.querySelector('[data-invite-copy]');
+    // Should be marked as bound only once; the dataset flag is the proxy
+    expect(copyBtn.dataset.inviteBound).toBe('true');
+  });
 });

@@ -42,7 +42,8 @@ export function renderInvite({ pathname, userAgent }) {
     androidCta.classList.add('btn--primary');
   }
 
-  if (copyBtn && code && navigator.clipboard) {
+  if (copyBtn && code && navigator.clipboard && !copyBtn.dataset.inviteBound) {
+    copyBtn.dataset.inviteBound = 'true';
     copyBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(code);
