@@ -1,1 +1,25 @@
-<!-- nav placeholder until Task 8 -->
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="/" class="nav__brand" aria-label="{{ site.name }} home">
+      <img src="/assets/img/logo.svg" alt="" width="28" height="28">
+      <span>{{ site.shortName }}</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        {% for item in nav %}
+          <li>
+            <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="nav__menu" id="nav-menu" aria-hidden="true">
+    {% for item in nav %}
+      <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+    {% endfor %}
+  </div>
+</header>
