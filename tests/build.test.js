@@ -34,4 +34,18 @@ describe('Eleventy build', () => {
     const robots = readFileSync('_site/robots.txt', 'utf-8');
     expect(robots).toContain('Sitemap:');
   });
+
+  it('produces a sitemap with all primary pages', () => {
+    const xml = readFileSync('_site/sitemap.xml', 'utf-8');
+    expect(xml).toContain('https://pipebandpredictor.com/');
+    expect(xml).toContain('https://pipebandpredictor.com/how-it-works/');
+    expect(xml).toContain('https://pipebandpredictor.com/faq/');
+    expect(xml).toContain('https://pipebandpredictor.com/support/');
+    expect(xml).toContain('https://pipebandpredictor.com/privacy/');
+    expect(xml).not.toContain('/invite/');
+  });
+
+  it('produces a 404 page', () => {
+    expect(existsSync('_site/404.html')).toBe(true);
+  });
 });
