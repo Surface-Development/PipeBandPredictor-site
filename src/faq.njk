@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: FAQ
+description: Frequently asked questions about predictions, scoring, leagues, and account management.
+permalink: /faq/
+---
+
+<section class="section">
+  <div class="container" style="max-width: var(--content-max);">
+    <span class="label">FAQ</span>
+    <h1 style="margin-top: var(--space-sm);">Frequently asked questions.</h1>
+    <p class="hero__lead">Quick answers about scoring, leagues, results, and accounts. Can't find what you're looking for? <a href="/support/">Get in touch.</a></p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container" style="max-width: var(--content-max);">
+    {% for group in faq %}
+      <div class="faq__group">
+        <h2 class="faq__group-heading">{{ group.group }}</h2>
+        {% for item in group.items %}
+          <details class="faq__item">
+            <summary>{{ item.q }}</summary>
+            <div class="faq__item__body">{{ item.a }}</div>
+          </details>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,39 @@
+[
+  {
+    "group": "Scoring",
+    "items": [
+      { "q": "How are points awarded?", "a": "It depends on the prediction group. Single-winner groups award 2 points for picking the winner. Multi-position groups award 3 points for an exact position match and 1 point for a correct band in the wrong position." },
+      { "q": "What if there's a tie?", "a": "Ties on the leaderboard are broken by total exact-match points first, then by total picks made across the season." },
+      { "q": "When do scores update?", "a": "Scores are computed once results are entered into the app, usually within a few hours of the event finishing." }
+    ]
+  },
+  {
+    "group": "Leagues",
+    "items": [
+      { "q": "How do I create a league?", "a": "Inside the app, head to the Leagues tab and tap Create. You'll get a 7-character code to share with anyone you want to invite." },
+      { "q": "How do I join a league?", "a": "Get the code from the league owner, then enter it on the Leagues tab. League invites via web links are returning in a future app update." },
+      { "q": "Can I leave a league?", "a": "Yes — open the league, open its menu, and choose Leave. You can always rejoin later if you have the code." }
+    ]
+  },
+  {
+    "group": "Results & data",
+    "items": [
+      { "q": "Where do you get results from?", "a": "Results are entered manually after each contest, sourced from official RSPBA announcements and contest websites." },
+      { "q": "How long after an event do scores update?", "a": "Usually within a few hours, sometimes the same evening. Larger championships with many prediction groups can take a little longer." }
+    ]
+  },
+  {
+    "group": "Account",
+    "items": [
+      { "q": "How do I sign in?", "a": "We support Sign in with Apple, Google, and Facebook. No passwords to remember." },
+      { "q": "How do I delete my account?", "a": "See the Data Deletion page for the full process. In short: email support and we'll remove your data within 30 days." }
+    ]
+  },
+  {
+    "group": "Platforms",
+    "items": [
+      { "q": "Is there an Android version?", "a": "Yes — coming soon. The Android build is in review and we'll update this page (and the homepage) the moment the Play Store listing goes live." },
+      { "q": "Is there a web version?", "a": "Not currently. The full prediction experience needs the touch interactions of the mobile app." }
+    ]
+  }
+]
