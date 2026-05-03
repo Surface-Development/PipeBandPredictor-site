@@ -4,6 +4,7 @@
   {% include "partials/head.njk" %}
 </head>
 <body>
+  <a href="#main" class="sr-only">Skip to main content</a>
   {% include "partials/nav.njk" %}
   <main id="main">{{ content | safe }}</main>
   {% include "partials/footer.njk" %}

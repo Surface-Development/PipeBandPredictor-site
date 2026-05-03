@@ -33,11 +33,11 @@ export function renderInvite({ pathname, userAgent }) {
     }
   }
 
-  if (iosCta && platform === 'ios') {
+  if (iosCta && platform === 'ios' && iosCta.getAttribute('aria-disabled') !== 'true') {
     iosCta.classList.remove('btn--ghost');
     iosCta.classList.add('btn--primary');
   }
-  if (androidCta && platform === 'android') {
+  if (androidCta && platform === 'android' && androidCta.getAttribute('aria-disabled') !== 'true') {
     androidCta.classList.remove('btn--ghost');
     androidCta.classList.add('btn--primary');
   }

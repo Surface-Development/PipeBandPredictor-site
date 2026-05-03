@@ -15,11 +15,11 @@ export default function (eleventyConfig) {
     const pad = n => String(n).padStart(2, '0');
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     return format
-      .replace('%Y', d.getFullYear())
-      .replace('%m', pad(d.getMonth() + 1))
-      .replace('%-d', d.getDate())
-      .replace('%d', pad(d.getDate()))
-      .replace('%b', months[d.getMonth()]);
+      .replace('%Y', d.getUTCFullYear())
+      .replace('%m', pad(d.getUTCMonth() + 1))
+      .replace('%-d', d.getUTCDate())
+      .replace('%d', pad(d.getUTCDate()))
+      .replace('%b', months[d.getUTCMonth()]);
   });
 
   return {

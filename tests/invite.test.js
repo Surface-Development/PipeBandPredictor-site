@@ -77,6 +77,19 @@ describe('renderInvite', () => {
     expect(android.classList.contains('btn--primary')).toBe(true);
   });
 
+  it('does not promote a disabled CTA to primary even on matching platform', () => {
+    document.body.innerHTML = `
+      <div data-invite-code></div>
+      <button data-invite-copy>Copy</button>
+      <span data-invite-status></span>
+      <span data-invite-cta="ios" aria-disabled="true">App Store · soon</span>
+      <span data-invite-cta="android" aria-disabled="true">Play Store · soon</span>
+    `;
+    renderInvite({ pathname: '/invite/ABC1234', userAgent: 'Android' });
+    const android = document.querySelector('[data-invite-cta="android"]');
+    expect(android.classList.contains('btn--primary')).toBe(false);
+  });
+
   it('does not add duplicate copy listeners when called twice', () => {
     renderInvite({ pathname: '/invite/ABC1234', userAgent: 'iPhone' });
     renderInvite({ pathname: '/invite/ABC1234', userAgent: 'iPhone' });
