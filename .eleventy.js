@@ -9,6 +9,19 @@ export default function (eleventyConfig) {
   // Watch CSS/JS for dev reload
   eleventyConfig.addWatchTarget('src/assets/');
 
+  eleventyConfig.addFilter('date', (value, format = '%Y-%m-%d') => {
+    const d = value === 'now' ? new Date() : new Date(value);
+    if (isNaN(d.getTime())) return '';
+    const pad = n => String(n).padStart(2, '0');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return format
+      .replace('%Y', d.getFullYear())
+      .replace('%m', pad(d.getMonth() + 1))
+      .replace('%-d', d.getDate())
+      .replace('%d', pad(d.getDate()))
+      .replace('%b', months[d.getMonth()]);
+  });
+
   return {
     dir: {
       input: 'src',

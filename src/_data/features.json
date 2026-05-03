@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Predictions",
+    "icon": "edit",
+    "description": "Rank your top finishers for every Grade 1 contest. Predictions lock when the round closes."
+  },
+  {
+    "title": "Leagues",
+    "icon": "users",
+    "description": "Compete in private leagues with friends, family, or fellow piping fans via a 7-character invite code."
+  },
+  {
+    "title": "Leaderboards",
+    "icon": "chart",
+    "description": "Global and league-specific rankings. Track your accuracy across the whole season."
+  },
+  {
+    "title": "Seasons",
+    "icon": "calendar",
+    "description": "Follow the full season from the British through to the Worlds. Every major comes alive."
+  }
+]

@@ -1,6 +1,119 @@
 ---
 layout: layouts/base.njk
 title: ""
-description: "The prediction game for Grade 1 pipe band championships."
+description: "The prediction game for Grade 1 pipe band championships. Pick your podium, climb the leaderboard, beat your friends."
 ---
-<h1>Pipe Band Predictor</h1>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <span class="label">Season {{ "now" | date("%Y") }} · Grade 1</span>
+      <h1 style="margin-top: var(--space-sm);">Predict the top 6.</h1>
+      <p class="hero__lead">{{ description }}</p>
+      {% include "partials/store-buttons.njk" %}
+    </div>
+    <div class="hero__visual" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="label">Features</span>
+      <h2>Everything you need to compete.</h2>
+    </div>
+    <div class="cards">
+      {% for f in features %}
+        <article class="card">
+          <div class="card__icon">{% include "partials/icons/" + f.icon + ".njk" ignore missing %}</div>
+          <h3>{{ f.title }}</h3>
+          <p>{{ f.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS TEASER -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="label">How it works</span>
+      <h2>Three steps to your prediction.</h2>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3>Pick</h3><p>Drag bands into your predicted finishing order before the round closes.</p></li>
+      <li class="step"><h3>Watch</h3><p>Follow the contest live. Predictions lock at the start of the round.</p></li>
+      <li class="step"><h3>Score</h3><p>3 points for an exact match, 1 point for a correct band in the wrong slot.</p></li>
+    </ol>
+    <p style="margin-top: var(--space-xl);"><a href="/how-it-works/" class="btn btn--ghost">Read the full breakdown →</a></p>
+  </div>
+</section>
+
+<!-- SCORING CALLOUT -->
+<section class="section">
+  <div class="container">
+    <div class="scoring">
+      <span class="label">Scoring</span>
+      <h2>How points are awarded.</h2>
+      <p style="margin-top: var(--space-md);">The scoring system adapts to each contest — single-winner rounds, top-6 rounds, top-4 rounds, and everything in between.</p>
+      <div class="scoring__grid">
+        <div class="scoring__tile"><span class="scoring__pts">2 pts</span><h3>Single-winner round</h3><p>Award given for the correct pick.</p></div>
+        <div class="scoring__tile"><span class="scoring__pts">3 pts</span><h3>Exact position match</h3><p>You ranked the band in the exact spot they finished.</p></div>
+        <div class="scoring__tile"><span class="scoring__pts">1 pt</span><h3>Correct band, wrong slot</h3><p>You picked the band but in a different position.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" style="text-align: center;">
+      <span class="label">Preview</span>
+      <h2>See it in action.</h2>
+    </div>
+    <div class="screenshots">
+      <img src="/assets/img/screenshots/home.png" alt="Home screen showing upcoming rounds" loading="lazy">
+      <img src="/assets/img/screenshots/predictions.png" alt="Predictions screen with bands ranked" loading="lazy">
+      <img src="/assets/img/screenshots/results.png" alt="Results and league leaderboard screen" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="label">Upcoming</span>
+      <h2>Season schedule.</h2>
+    </div>
+    {% if schedule and schedule.length %}
+      <div class="schedule">
+        {% for round in schedule %}
+          <div class="schedule__chip{% if round.isMajor %} schedule__chip--major{% endif %}">
+            <div class="schedule__name">{{ round.name }}</div>
+            <div class="schedule__date">{{ round.eventDate | date("%-d %b %Y") }}</div>
+            {% if round.isMajor %}<span class="schedule__pill">Major</span>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="schedule__empty">The next season's rounds will appear here once they're announced.</p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- DOWNLOAD CTA -->
+<section class="section" style="background: linear-gradient(135deg, var(--color-surface-2) 0%, #FFFBE6 100%); border-radius: var(--radius-2xl); margin: var(--space-2xl) auto; max-width: var(--container-max);">
+  <div class="container" style="text-align: center;">
+    <span class="label">Download</span>
+    <h2 style="margin-top: var(--space-sm);">Get the app.</h2>
+    <p style="max-width: 480px; margin: var(--space-md) auto var(--space-xl);">Free on the App Store. Coming to Google Play soon.</p>
+    <div style="display: flex; justify-content: center;">
+      {% include "partials/store-buttons.njk" %}
+    </div>
+  </div>
+</section>
