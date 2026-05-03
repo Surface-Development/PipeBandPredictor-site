@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+---
+<article class="container section">
+  <header class="section-head">
+    <h1>{{ title }}</h1>
+    {% if intro %}<p class="hero__lead">{{ intro }}</p>{% endif %}
+  </header>
+  {{ content | safe }}
+</article>

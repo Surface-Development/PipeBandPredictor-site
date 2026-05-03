@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title %}{{ title }} – {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+<meta name="description" content="{{ description or site.tagline }}">
+<meta name="theme-color" content="{{ site.themeColor }}">
+
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<link rel="icon" href="/assets/img/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+
+{% include "partials/og.njk" %}

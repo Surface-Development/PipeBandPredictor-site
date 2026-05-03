@@ -1,0 +1,17 @@
+{
+  "name": "Pipe Band Predictor",
+  "shortName": "PipeBandPredictor",
+  "tagline": "The prediction game for Grade 1 pipe band championships.",
+  "url": "https://pipebandpredictor.com",
+  "themeColor": "#3C8CCA",
+  "supportEmail": "support@surfacedevelopment.co.uk",
+  "company": "Surface Development",
+  "companyUrl": "https://surfacedevelopment.co.uk",
+  "appStore": {
+    "ios": "https://apps.apple.com/gb/app/pipe-band-predictor/id6758277252",
+    "iosAvailable": true,
+    "android": null,
+    "androidAvailable": false
+  },
+  "ogImage": "/assets/img/og/pipe-band-predictor.png"
+}

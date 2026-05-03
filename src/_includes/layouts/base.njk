@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>{{ title }}</title>
+  {% include "partials/head.njk" %}
 </head>
-<body>{{ content | safe }}</body>
+<body>
+  {% include "partials/nav.njk" %}
+  <main id="main">{{ content | safe }}</main>
+  {% include "partials/footer.njk" %}
+  <script src="/assets/js/nav.js" defer></script>
+  {% block extraScripts %}{% endblock %}
+</body>
 </html>
