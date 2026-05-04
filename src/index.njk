@@ -110,10 +110,9 @@ description: "The prediction game for Grade 1 pipe band championships. Pick your
     {% if schedule and schedule.length %}
       <div class="schedule">
         {% for round in schedule %}
-          <div class="schedule__chip{% if round.isMajor %} schedule__chip--major{% endif %}">
+          <div class="schedule__chip">
             <div class="schedule__name">{{ round.name }}</div>
             <div class="schedule__date">{{ round.eventDate | date("%-d %b %Y") }}</div>
-            {% if round.isMajor %}<span class="schedule__pill">Major</span>{% endif %}
           </div>
         {% endfor %}
       </div>
