@@ -1,0 +1,25 @@
+name: Scheduled Pages rebuild
+
+# Triggers a Cloudflare Pages deploy once a week so the live site picks up
+# any Sanity content edits (we don't have a Sanity webhook slot to spare).
+# Saturday is the usual championship day, so Sunday 06:00 UTC catches the
+# previous day's result edits before Monday morning traffic.
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'
+  workflow_dispatch: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages deploy hook
+        env:
+          DEPLOY_HOOK: ${{ secrets.CF_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$DEPLOY_HOOK" ]; then
+            echo "::error::CF_DEPLOY_HOOK secret is not set"
+            exit 1
+          fi
+          curl --fail-with-body --show-error -sS -X POST "$DEPLOY_HOOK"
