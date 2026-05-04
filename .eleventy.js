@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 export default function (eleventyConfig) {
   // Passthrough copy: assets, well-known, redirects/headers
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
