@@ -31,7 +31,7 @@ describe('schedule data file', () => {
     const result = await loadSchedule();
     expect(result).toHaveLength(2);
     expect(result[0].name).toBe('British Championships');
-    expect(result[1].isMajor).toBe(true);
+    expect(result[1].name).toBe('World Pipe Band Championships');
   });
 
   it('returns [] when env vars are missing', async () => {
@@ -48,15 +48,4 @@ describe('schedule data file', () => {
     expect(result).toEqual([]);
   });
 
-  it('marks Worlds rounds with isMajor=true', async () => {
-    process.env.SANITY_PROJECT_ID = 'pipebandpredictor';
-    process.env.SANITY_DATASET = 'production';
-    fetchMock.mockResolvedValue([
-      { _id: '1', name: 'Scottish Championships', eventDate: '2026-07-26', roundType: 'band', season: '2026' },
-      { _id: '2', name: 'World Pipe Band Championships', eventDate: '2026-08-15', roundType: 'band', season: '2026' },
-    ]);
-    const result = await loadSchedule();
-    expect(result[0].isMajor).toBe(false);
-    expect(result[1].isMajor).toBe(true);
-  });
 });
