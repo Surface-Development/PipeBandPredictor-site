@@ -5,7 +5,7 @@ Marketing site for the [PipeBandPredictor](https://apps.apple.com/gb/app/pipe-ba
 ## Quick start
 
 ```bash
-nvm use            # Node 20
+nvm use            # Node 22
 npm install
 cp .env.example .env   # optional: fill in Sanity creds for live schedule data
 npm run dev        # http://localhost:8080
@@ -34,7 +34,7 @@ One-time setup:
 2. **Pages project.** Cloudflare dashboard → Pages → Create project → Connect to GitHub → select `PipeBandPredictor-site`.
    - Build command: `npm run build`
    - Build output directory: `_site`
-   - Node version: `20`
+   - Node version: `22`
    - Root directory: `/`
 3. **Environment variables.** Settings → Environment variables → add `SANITY_PROJECT_ID`, `SANITY_DATASET`, and (if needed) `SANITY_READ_TOKEN` to **Production**.
 4. **Custom domain.** Settings → Custom domains → add `pipebandpredictor.com`. Cloudflare provisions the cert automatically. The `www` redirect is handled by `_redirects`.
