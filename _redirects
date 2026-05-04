@@ -1,5 +1,4 @@
-# Universal-link invite landing — rewrite (200), not redirect, so URL stays intact
-/invite/* /invite/index.html 200
-
-# www → apex
-https://www.pipebandpredictor.com/* https://pipebandpredictor.com/:splat 301
+# Universal-link invite landing — rewrite (200), not redirect, so URL stays intact.
+# Destination is /invite (no slash, no .html) so it can't re-match /invite/* and loop.
+# Cloudflare serves /invite.html for /invite automatically.
+/invite/* /invite 200

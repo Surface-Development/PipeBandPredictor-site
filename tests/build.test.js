@@ -26,7 +26,7 @@ describe('Eleventy build', () => {
   it('passes through _redirects', () => {
     expect(existsSync('_site/_redirects')).toBe(true);
     const redirects = readFileSync('_site/_redirects', 'utf-8');
-    expect(redirects).toContain('/invite/* /invite/index.html 200');
+    expect(redirects).toContain('/invite/* /invite 200');
   });
 
   it('passes through robots.txt', () => {
@@ -64,9 +64,9 @@ describe('Eleventy build', () => {
     expect(json[0].target.package_name).toBe('com.pipebandpredictor.app');
   });
 
-  it('produces invite landing at /invite/index.html', () => {
-    expect(existsSync('_site/invite/index.html')).toBe(true);
-    const html = readFileSync('_site/invite/index.html', 'utf-8');
+  it('produces invite landing at /invite.html', () => {
+    expect(existsSync('_site/invite.html')).toBe(true);
+    const html = readFileSync('_site/invite.html', 'utf-8');
     expect(html).toContain('data-invite-code');
   });
 
