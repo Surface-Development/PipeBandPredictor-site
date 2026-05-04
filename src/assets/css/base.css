@@ -30,6 +30,8 @@ a {
 }
 a:hover { color: var(--color-primary); }
 
+a[href^="mailto:"], a[href^="tel:"] { overflow-wrap: anywhere; }
+
 ul, ol { list-style: none; }
 
 /* ============================================================
