@@ -14,7 +14,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "format": "prettier --write \"**/*.{js,njk,json,md,css}\"",
-    "format:check": "prettier --check \"**/*.{js,njk,json,md,css}\""
+    "format:check": "prettier --check \"**/*.{js,njk,json,md,css}\"",
+    "generate:og": "node scripts/generate-og.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
@@ -22,6 +23,7 @@
     "dotenv": "^17.4.2",
     "happy-dom": "^15.0.0",
     "prettier": "^3.3.0",
+    "sharp": "^0.34.5",
     "vitest": "^2.1.0"
   }
 }
