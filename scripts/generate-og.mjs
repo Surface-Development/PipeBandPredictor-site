@@ -48,11 +48,7 @@ const svgBackground = `<?xml version="1.0" encoding="UTF-8"?>
     <text x="${W / 2}" y="460" font-size="68" font-weight="800"
           fill="#FFFFFF" letter-spacing="-1.4">Pipe Band Predictor</text>
     <text x="${W / 2}" y="520" font-size="32" font-weight="600"
-          fill="#FACC15" letter-spacing="0.5">Predict the top 6</text>
-    <text x="${W / 2}" y="580" font-size="22" font-weight="400"
-          fill="#FFFFFF" fill-opacity="0.78">
-      Grade 1 pipe band championship prediction game
-    </text>
+          fill="#FACC15" letter-spacing="0.5">Pipe band prediction game</text>
   </g>
 </svg>`;
 
