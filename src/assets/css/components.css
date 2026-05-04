@@ -68,13 +68,17 @@
 .hero__lead { font-size: clamp(1rem, 0.95rem + 0.4vw, 1.125rem); margin: var(--space-md) 0 var(--space-xl); }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: var(--space-md); }
 .hero__visual {
-  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-deep) 100%);
   border-radius: var(--radius-2xl);
-  aspect-ratio: 9 / 16;
-  max-height: 540px;
   margin-inline: auto;
+  max-width: 320px;
   width: 80%;
+  overflow: hidden;
   box-shadow: var(--shadow-card-feat);
+}
+.hero__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* ============================================================
