@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+title: Download
+description: Get Pipe Band Predictor on iPhone, iPad, and Android. The prediction game for Grade 1 pipe band championships.
+permalink: /download/
+---
+
+<section class="section section--hero">
+  <div class="container" style="max-width: var(--content-max); text-align: center;">
+    <span class="label">Download</span>
+    <h1 style="margin-top: var(--space-sm);">Get {{ site.name }}.</h1>
+    <p class="hero__lead" style="margin-inline: auto;">{{ site.tagline }}</p>
+
+    <div style="display: flex; justify-content: center; margin-top: var(--space-xl);">
+      {% include "partials/store-buttons.njk" %}
+    </div>
+
+    <p id="download-redirect-note" hidden style="margin-top: var(--space-lg); color: var(--color-text-muted); font-size: 0.875rem;">
+      Taking you to the store&hellip; if nothing happens, tap a badge above.
+    </p>
+  </div>
+</section>
+
+{% block extraScripts %}
+<script>
+(function () {
+  var iosAvailable = {{ site.appStore.iosAvailable | dump | safe }};
+  var androidAvailable = {{ site.appStore.androidAvailable | dump | safe }};
+  var iosUrl = {{ site.appStore.ios | dump | safe }};
+  var androidUrl = {{ site.appStore.android | dump | safe }};
+
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isAndroid = /android/i.test(ua);
+
+  var target = null;
+  if (isIOS && iosAvailable && iosUrl) target = iosUrl;
+  else if (isAndroid && androidAvailable && androidUrl) target = androidUrl;
+
+  if (target) {
+    var note = document.getElementById('download-redirect-note');
+    if (note) note.hidden = false;
+    window.location.replace(target);
+  }
+})();
+</script>
+{% endblock %}
