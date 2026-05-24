@@ -1,6 +1,6 @@
 # pipebandpredictor.com
 
-Marketing site for the [PipeBandPredictor](https://apps.apple.com/gb/app/pipe-band-predictor/id6758277252) mobile app. Static site built with Eleventy, deployed on Cloudflare Pages.
+Marketing site for the [PipeBandPredictor](https://apps.apple.com/app/id6758277252) mobile app. Static site built with Eleventy, deployed on Cloudflare Pages.
 
 ## Quick start
 

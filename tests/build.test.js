@@ -73,6 +73,6 @@ describe('Eleventy build', () => {
   it('includes JSON-LD on homepage', () => {
     const html = readFileSync('_site/index.html', 'utf-8');
     expect(html).toContain('"@type": "SoftwareApplication"');
-    expect(html).toContain('"installUrl": "https://apps.apple.com/gb/app/pipe-band-predictor/id6758277252"');
+    expect(html).toContain('"installUrl": "https://apps.apple.com/app/id6758277252"');
   });
 });
