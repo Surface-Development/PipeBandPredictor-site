@@ -1966,6 +1966,12 @@
 }
 
 @media (max-width: 600px) {
+    /* The 4rem desktop gutter is far too wide on a phone - it squeezes every
+       card to a narrow column. Pull it in so cards use the screen width. */
+    .advertise .container {
+        padding-inline: var(--space-md);
+    }
+
     .advertise .section {
         padding: var(--space-xl) 0;
     }
