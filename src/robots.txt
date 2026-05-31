@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+# Answer engines and AI crawlers are explicitly welcome - with almost no
+# off-site footprint, being cited by these engines is pure upside.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
 Sitemap: https://pipebandpredictor.com/sitemap.xml
