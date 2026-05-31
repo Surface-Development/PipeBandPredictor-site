@@ -20,6 +20,16 @@
 
 {% include "partials/og.njk" %}
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "{{ site.companyUrl }}/#organization",
+  "name": "{{ site.company }}",
+  "url": "{{ site.companyUrl }}"
+}
+</script>
+
 {% block jsonLd %}{% endblock %}
 
 {% if site.cloudflareAnalyticsToken %}
