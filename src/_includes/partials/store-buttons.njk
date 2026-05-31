@@ -1,22 +1,22 @@
 <div class="hero__ctas store-badges">
   {% if site.appStore.iosAvailable %}
     <a href="{{ site.appStore.ios }}" class="store-badge" rel="noopener" aria-label="Download {{ site.name }} on the App Store">
-      <img src="/assets/img/badges/app-store.svg" alt="Download on the App Store" width="144" height="48" />
+      <img eleventy:ignore src="/assets/img/badges/app-store.svg" alt="Download on the App Store" width="144" height="48" />
     </a>
   {% else %}
     <span class="store-badge store-badge--soon" role="img" aria-label="{{ site.name }} coming soon to the App Store">
-      <img src="/assets/img/badges/app-store.svg" alt="" width="144" height="48" aria-hidden="true" />
+      <img eleventy:ignore src="/assets/img/badges/app-store.svg" alt="" width="144" height="48" aria-hidden="true" />
       <span class="store-badge__caption">Coming soon</span>
     </span>
   {% endif %}
 
   {% if site.appStore.androidAvailable %}
     <a href="{{ site.appStore.android }}" class="store-badge" rel="noopener" aria-label="Get {{ site.name }} on Google Play">
-      <img src="/assets/img/badges/google-play.png" alt="Get it on Google Play" width="124" height="48" />
+      <img eleventy:ignore src="/assets/img/badges/google-play.png" alt="Get it on Google Play" width="124" height="48" />
     </a>
   {% else %}
     <span class="store-badge store-badge--soon" role="img" aria-label="{{ site.name }} coming soon to Google Play">
-      <img src="/assets/img/badges/google-play.png" alt="" width="124" height="48" aria-hidden="true" />
+      <img eleventy:ignore src="/assets/img/badges/google-play.png" alt="" width="124" height="48" aria-hidden="true" />
       <span class="store-badge__caption">Coming soon</span>
     </span>
   {% endif %}
