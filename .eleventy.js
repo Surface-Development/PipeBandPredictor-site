@@ -1,6 +1,21 @@
 import 'dotenv/config';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default function (eleventyConfig) {
+  // Optimise raster <img> at build: emit AVIF/WebP/fallback with responsive
+  // widths. Per-image attributes already in the markup (the hero's eager
+  // loading and fetchpriority) are preserved; only missing ones are filled.
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    extensions: 'html',
+    formats: ['avif', 'webp', 'auto'],
+    widths: [480, 960, 'auto'],
+    defaultAttributes: {
+      loading: 'lazy',
+      decoding: 'async',
+      sizes: '(min-width: 60rem) 40rem, 90vw',
+    },
+  });
+
   // Passthrough copy: assets, well-known, redirects/headers
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
   eleventyConfig.addPassthroughCopy('src/.well-known');
