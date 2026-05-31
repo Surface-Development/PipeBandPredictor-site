@@ -77,7 +77,7 @@ description: "The prediction game for Grade 1 pipe band championships. Pick your
     <div class="scoring">
       <span class="label">Scoring</span>
       <h2>How points are awarded.</h2>
-      <p style="margin-top: var(--space-md);">The scoring system adapts to each contest — single-winner rounds, top-6 rounds, top-4 rounds, and everything in between.</p>
+      <p style="margin-top: var(--space-md);">The scoring system adapts to each contest - single-winner rounds, top-6 rounds, top-4 rounds, and everything in between.</p>
       <div class="scoring__grid">
         <div class="scoring__tile"><span class="scoring__pts">2 pts</span><h3>Single-winner round</h3><p>Award given for the correct pick.</p></div>
         <div class="scoring__tile"><span class="scoring__pts">3 pts</span><h3>Exact position match</h3><p>You ranked the band in the exact spot they finished.</p></div>
@@ -110,17 +110,45 @@ description: "The prediction game for Grade 1 pipe band championships. Pick your
       <h2>Season schedule.</h2>
     </div>
     {% if schedule and schedule.length %}
-      <div class="schedule">
-        {% for round in schedule %}
-          <div class="schedule__chip">
-            <div class="schedule__name">{{ round.name }}</div>
-            <div class="schedule__date">{{ round.eventDate | date("%-d %b %Y") }}</div>
+      {% set statusLabels = { "soon": "Soon", "open": "Predictions open", "locked": "Locked", "done": "Done" } %}
+      {% macro calItem(round, statusLabels) %}
+        <div class="cal__item cal__item--{{ round.status }}{% if round.flagship %} cal__item--flagship{% endif %}" data-event-date="{{ round.eventDate }}"{% if round.predictionsOpenAt %} data-open="{{ round.predictionsOpenAt }}"{% endif %}{% if round.predictionsCloseAt %} data-close="{{ round.predictionsCloseAt }}"{% endif %}>
+          <span class="cal__dot" aria-hidden="true"></span>
+          <span class="cal__date">{{ round.eventDate | date("%-d %b") }}<span class="cal__year">{{ round.eventDate | date("%Y") }}</span></span>
+          <span class="cal__body">
+            <span class="cal__name">{{ round.name }}{% if round.flagship %} <span class="cal__star" aria-hidden="true">&#9733;</span>{% endif %}</span>
+            <span class="cal__meta">
+              <span class="cal__tag cal__tag--{{ round.roundType }}">{{ "Solo" if round.roundType == "solo" else "Band" }}</span>
+              <span class="cal__status" data-status>{{ statusLabels[round.status] }}</span>
+            </span>
+          </span>
+        </div>
+      {% endmacro %}
+      <div class="cal" data-cal>
+        <button type="button" class="cal__toggle" data-cal-toggle aria-expanded="false" hidden>
+          <span data-cal-toggle-label>Show previous rounds</span>
+          <span class="cal__toggle-chev" aria-hidden="true">&#9662;</span>
+        </button>
+        <div class="cal__previous" data-cal-previous>
+          <div class="cal__previous-inner">
+            {% for round in schedule %}{% if round.hiddenPast %}{{ calItem(round, statusLabels) }}{% endif %}{% endfor %}
           </div>
-        {% endfor %}
+        </div>
+        {% for round in schedule %}{% if not round.hiddenPast %}{{ calItem(round, statusLabels) }}{% endif %}{% endfor %}
       </div>
     {% else %}
-      <p class="schedule__empty">The next season's rounds will appear here once they're announced.</p>
+      <p class="schedule__empty">The season's rounds will appear here once they're announced.</p>
     {% endif %}
+  </div>
+</section>
+
+<!-- SPONSORSHIP CTA -->
+<section class="section">
+  <div class="container" style="text-align: center;">
+    <span class="label">Sponsorship</span>
+    <h2 style="margin-top: var(--space-sm);">Put your brand in front of the pipe band community.</h2>
+    <p style="max-width: 480px; margin: var(--space-md) auto var(--space-xl);">Reach engaged fans throughout the Grade 1 season with in-app and event-week placements.</p>
+    <p><a href="/sponsorship/" class="btn btn--primary">See sponsorship options</a></p>
   </div>
 </section>
 
@@ -135,3 +163,59 @@ description: "The prediction game for Grade 1 pipe band championships. Pick your
     </div>
   </div>
 </section>
+
+{% block extraScripts %}
+<script>
+  (function () {
+    var labels = { soon: 'Soon', open: 'Predictions open', locked: 'Locked', done: 'Done' };
+    var states = ['soon', 'open', 'locked', 'done'];
+    var now = Date.now();
+    document.querySelectorAll('.cal__item').forEach(function (item) {
+      var eventDate = item.getAttribute('data-event-date');
+      var openAttr = item.getAttribute('data-open');
+      var closeAttr = item.getAttribute('data-close');
+      var openTime = openAttr ? new Date(openAttr).getTime() : null;
+      var closeTime = closeAttr ? new Date(closeAttr).getTime() : null;
+      var eventEnd = eventDate ? new Date(eventDate + 'T23:59:59').getTime() : null;
+
+      var status = 'soon';
+      if (eventEnd !== null && now > eventEnd) status = 'done';
+      else if (openTime !== null && now < openTime) status = 'soon';
+      else if (openTime !== null && closeTime !== null && now >= openTime && now <= closeTime) status = 'open';
+      else if (closeTime !== null && now > closeTime) status = 'locked';
+
+      states.forEach(function (state) { item.classList.remove('cal__item--' + state); });
+      item.classList.add('cal__item--' + status);
+      var pill = item.querySelector('[data-status]');
+      if (pill) { pill.textContent = labels[status]; }
+    });
+  })();
+
+  (function () {
+    var cal = document.querySelector('[data-cal]');
+    if (!cal) { return; }
+    var toggle = cal.querySelector('[data-cal-toggle]');
+    var previous = cal.querySelector('[data-cal-previous]');
+    var label = cal.querySelector('[data-cal-toggle-label]');
+    var hiddenCount = previous ? previous.querySelectorAll('.cal__item').length : 0;
+    if (!toggle || !previous || hiddenCount === 0) { return; }
+
+    // Collapse by default only once JS is available - no-JS shows every round.
+    cal.classList.add('cal--no-anim', 'is-collapsed');
+    toggle.hidden = false;
+    void cal.offsetHeight;
+    cal.classList.remove('cal--no-anim');
+
+    toggle.addEventListener('click', function () {
+      var collapsed = cal.classList.toggle('is-collapsed');
+      toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      if (label) { label.textContent = collapsed ? 'Show previous rounds' : 'Hide previous rounds'; }
+      if (!collapsed) {
+        window.requestAnimationFrame(function () {
+          previous.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+    });
+  })();
+</script>
+{% endblock %}
