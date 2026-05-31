@@ -11,14 +11,51 @@ description: "The prediction game for Grade 1 pipe band championships. Pick your
   "@type": "SoftwareApplication",
   "name": "{{ site.name }}",
   "description": "{{ site.tagline }}",
-  "applicationCategory": "SportsApplication",
+  "applicationCategory": "GameApplication",
   "operatingSystem": "iOS, Android",
   "url": "{{ site.url }}",
   "installUrl": "{{ site.appStore.ios }}",
+  "downloadUrl": "{{ site.appStore.ios }}",
+  "datePublished": "2026-05-24",
+  "screenshot": [
+    "{{ site.url }}/assets/img/screenshots/home.png",
+    "{{ site.url }}/assets/img/screenshots/predictions.png",
+    "{{ site.url }}/assets/img/screenshots/results.png"
+  ],
+  "featureList": [{% for feature in features %}{% if not loop.first %}, {% endif %}{{ feature.title | dump | safe }}{% endfor %}],
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-  "author": { "@type": "Organization", "name": "{{ site.company }}", "url": "{{ site.companyUrl }}" }
+  "author": { "@id": "{{ site.companyUrl }}/#organization" },
+  "publisher": { "@id": "{{ site.companyUrl }}/#organization" },
+  "sameAs": [
+    "{{ site.appStore.ios }}",
+    "https://www.facebook.com/share/1Ahcf8599T/?mibextid=wwXIfr",
+    "https://open.spotify.com/episode/0pBhUb68tSGRvL0nNBCpLX"
+  ]
 }
 </script>
+{% if schedule and schedule.length %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Pipe band championship schedule",
+  "itemListElement": [
+{% for round in schedule %}{% if not loop.first %},{% endif %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "SportsEvent",
+        "name": {{ round.name | dump | safe }},
+        "startDate": {{ round.eventDate | dump | safe }},
+        "sport": "Pipe band",
+        "url": "{{ site.url }}/"
+      }
+    }{% endfor %}
+  ]
+}
+</script>
+{% endif %}
 {% endblock %}
 
 <!-- HERO -->
