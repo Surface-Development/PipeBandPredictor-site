@@ -5,6 +5,24 @@ description: Frequently asked questions about predictions, scoring, leagues, and
 permalink: /faq/
 ---
 
+{% block jsonLd %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+{%- for group in faq -%}
+{%- set isFirstGroup = loop.first -%}
+{%- for item in group.items -%}
+{%- if not (isFirstGroup and loop.first) %},{% endif %}
+    {"@type": "Question", "name": {{ item.q | dump | safe }}, "acceptedAnswer": {"@type": "Answer", "text": {{ item.a | dump | safe }}}}
+{%- endfor -%}
+{%- endfor %}
+  ]
+}
+</script>
+{% endblock %}
+
 <section class="section">
   <div class="container" style="max-width: var(--content-max);">
     <span class="label">FAQ</span>
