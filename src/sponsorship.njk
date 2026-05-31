@@ -1,0 +1,1100 @@
+---
+layout: layouts/base.njk
+title: Sponsorship
+description: "Sponsor Pipe Band Predictor and reach the piping community at championship time. Event-window sponsorships around the majors, building to the Worlds in Glasgow."
+permalink: /sponsorship/
+---
+
+{% block headStyles %}
+<link rel="stylesheet" href="/assets/css/sponsorship.css">
+{% endblock %}
+
+{% block jsonLd %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+    { "@type": "ListItem", "position": 2, "name": "Sponsorship", "item": "{{ site.url }}/sponsorship/" }
+  ]
+}
+</script>
+{% endblock %}
+
+<div class="advertise">
+            <!-- Hero -->
+            <section class="adv-hero">
+                <div class="container">
+                    <img class="adv-hero-mark stagger stagger-1" src="/assets/img/icons/icon.png" alt="Pipe Band Predictor" width="80" height="80">
+                    <span class="adv-eyebrow stagger stagger-1">Sponsorship &middot; Pipe Band Predictor</span>
+                    <h1 class="stagger stagger-2">Put your brand at the heart of the pipe band season</h1>
+                    <p class="adv-hero-sub stagger stagger-3">Sponsor the in-app spotlight for a championship window and reach the whole following - players, fans and families - right through the season to <span class="adv-hero-gold">the Worlds</span> in Glasgow.</p>
+                    <div class="adv-hero-actions stagger stagger-4">
+                        <a href="#contact" class="adv-btn adv-btn-primary">Enquire about a window</a>
+                        <a href="#options" class="adv-btn adv-btn-ghost">See sponsorship options</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- App explainer -->
+            <section class="section screenshot-area fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">What you'd be sponsoring</span>
+                    <h2 class="section-heading">The app the piping world plays</h2>
+                    <p class="adv-section-intro">Pipe Band Predictor is a free prediction game for the pipe band season. Players, fans and families pick the podium at each major, climb the season leaderboard, and run private leagues with bandmates and friends.</p>
+                    <div class="adv-section-cta">
+                        <a href="/products/pipe-band-predictor.html" class="adv-btn adv-btn-primary">Find out more about the app</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scroll demo: pick → spotlight → result (full-bleed takeover) -->
+            <section class="adv-sd" aria-label="How a sponsor's spotlight appears as players use the app">
+                <div class="adv-sd-stage">
+                    <div class="adv-sd-bg adv-sd-bg--1" aria-hidden="true"></div>
+                    <div class="adv-sd-bg adv-sd-bg--2" aria-hidden="true"></div>
+                    <div class="adv-sd-bg adv-sd-bg--3" aria-hidden="true"></div>
+
+                    <div class="adv-sd-head">
+                        <span class="adv-eyebrow">See how it works</span>
+                        <div class="adv-sd-captions">
+                            <h2 class="adv-sd-caption" data-beat="1">Players make the pick</h2>
+                            <h2 class="adv-sd-caption" data-beat="2">Then, your spotlight</h2>
+                            <h2 class="adv-sd-caption" data-beat="3">Climb the leaderboard</h2>
+                        </div>
+                    </div>
+
+                    <div class="adv-sd-canvas" aria-hidden="true">
+                        <!-- Scene A — make the pick -->
+                        <div class="adv-sd-scene adv-sd-scene--predict">
+                            <span class="adv-sd-scene-label">Overall &middot; British Championships</span>
+                            <ul class="adv-sd-picks">
+                                <li class="adv-sd-pick"><span class="adv-sd-badge adv-sd-badge--gold">1</span><span class="adv-sd-pick-name">Inveraray and District</span></li>
+                                <li class="adv-sd-pick"><span class="adv-sd-badge adv-sd-badge--silver">2</span><span class="adv-sd-pick-name">Field Marshall Montgomery</span></li>
+                                <li class="adv-sd-pick"><span class="adv-sd-badge adv-sd-badge--bronze">3</span><span class="adv-sd-pick-name">People's Ford Boghall</span></li>
+                                <li class="adv-sd-pick"><span class="adv-sd-badge">4</span><span class="adv-sd-pick-name">St Laurence O'Toole</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Scene B — the spotlight -->
+                        <div class="adv-sd-scene adv-sd-scene--spot">
+                            <div class="adv-sd-spot-card">
+                                <span class="adv-sd-spot-tag">Spotlight</span>
+                                <span class="adv-sd-spot-logo">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M6.5 3.5 H17.5 L16 20.5 H8 Z"/>
+                                        <path d="M6.9 8 H17.1"/>
+                                        <path d="M13.8 11 L13.4 16.5"/>
+                                    </svg>
+                                </span>
+                                <span class="adv-sd-spot-name">The Piper's Rest</span>
+                                <span class="adv-sd-spot-line">Craft ales and a warm welcome after the games.</span>
+                                <span class="adv-sd-spot-pill">Visit sponsor</span>
+                            </div>
+                        </div>
+
+                        <!-- Scene C — the result -->
+                        <div class="adv-sd-scene adv-sd-scene--board">
+                            <span class="adv-sd-scene-label">Season leaderboard &middot; and private leagues</span>
+                            <div class="adv-sd-board">
+                                <div class="adv-sd-board-head"><span>POS</span><span>PLAYER</span><span>PTS</span></div>
+                                <div class="adv-sd-board-body">
+                                    <div class="adv-sd-slots">
+                                        <span class="adv-sd-slot adv-sd-badge--gold">1</span>
+                                        <span class="adv-sd-slot adv-sd-badge--silver">2</span>
+                                        <span class="adv-sd-slot adv-sd-badge--bronze">3</span>
+                                        <span class="adv-sd-slot">4</span>
+                                        <span class="adv-sd-slot">5</span>
+                                        <span class="adv-sd-slot">6</span>
+                                        <span class="adv-sd-slot">7</span>
+                                    </div>
+                                    <ul class="adv-sd-rows">
+                                        <li class="adv-sd-row" data-start="0"><span class="adv-sd-row-name">Callum MacKenzie</span><span class="adv-sd-row-pts">188</span></li>
+                                        <li class="adv-sd-row" data-start="1"><span class="adv-sd-row-name">Fiona Campbell</span><span class="adv-sd-row-pts">180</span></li>
+                                        <li class="adv-sd-row" data-start="2"><span class="adv-sd-row-name">Hamish Fraser</span><span class="adv-sd-row-pts">165</span></li>
+                                        <li class="adv-sd-row" data-start="3"><span class="adv-sd-row-name">Rory MacDonald</span><span class="adv-sd-row-pts">157</span></li>
+                                        <li class="adv-sd-row adv-sd-row--you" data-start="4"><span class="adv-sd-row-name">You</span><span class="adv-sd-row-pts" data-from="150" data-to="205">150</span></li>
+                                        <li class="adv-sd-row" data-start="5"><span class="adv-sd-row-name">Eilidh Grant</span><span class="adv-sd-row-pts">147</span></li>
+                                        <li class="adv-sd-row" data-start="6"><span class="adv-sd-row-name">Isla Stewart</span><span class="adv-sd-row-pts">140</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="adv-sd-progress" aria-hidden="true">
+                        <span class="adv-sd-dot" data-beat="1"></span>
+                        <span class="adv-sd-dot" data-beat="2"></span>
+                        <span class="adv-sd-dot" data-beat="3"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Momentum / stats -->
+            <section class="section adv-momentum fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">Momentum</span>
+                    <h2 class="section-heading">Early days, steep curve</h2>
+                    <div class="adv-momentum-grid">
+                        <!-- Growth chart: real active-player figures 24-31 May 2026 (149, 279, 465, 558), then a curved projection -->
+                        <div class="adv-chart-card">
+                            <div class="adv-chart-head">
+                                <h3>Active players</h3>
+                                <span class="adv-chart-trend">&#9650; Trending up</span>
+                            </div>
+                            <div class="adv-chart" role="img" aria-label="Line chart of active players rising through real figures of 149 at launch on 24 May, 279 on 27 May, 465 on 29 May and 558 on 31 May 2026, then a curved dashed projection across a compressed timeline accelerating to around 1,500 by the World Championships on 15 August 2026">
+                                <svg class="adv-chart-svg" viewBox="0 0 600 252" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="advGrowthFill" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#3C8CCA" stop-opacity="0.28"/>
+                                            <stop offset="100%" stop-color="#3C8CCA" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <line x1="44" y1="210" x2="565" y2="210" stroke="#ECECEC" stroke-width="1"/>
+                                    <path class="adv-chart-area" d="M50,194.2 L191.4,173.5 L285.7,156.7 L380,150.7 L380,210 L50,210 Z" fill="url(#advGrowthFill)"/>
+                                    <path class="adv-chart-dashed adv-chart-dashed-1" d="M380,150.7 L388,148" fill="none" stroke="#3C8CCA" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+                                    <path class="adv-chart-dashed adv-chart-dashed-2" d="M400,143.8 L413.3,138.8 L426.7,133.4 L440,127.6 L453.3,121.3 L466.6,114.5 L480,107.3 L493.3,99.5 L506.6,91.1 L520,82.1 L533.3,72.3 L546.6,61.9 L560,50.6" fill="none" stroke="#3C8CCA" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+                                    <path class="adv-chart-line" d="M50,194.2 L191.4,173.5 L285.7,156.7 L380,150.7" fill="none" stroke="#3C8CCA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M388,217 l10,-15" fill="none" stroke="#C4CDD6" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M398,217 l10,-15" fill="none" stroke="#C4CDD6" stroke-width="2" stroke-linecap="round"/>
+                                    <circle class="adv-chart-dot adv-chart-dot-1" cx="50" cy="194.2" r="5" fill="#3C8CCA" stroke="#FFFFFF" stroke-width="2"/>
+                                    <circle class="adv-chart-dot adv-chart-dot-mid" cx="191.4" cy="173.5" r="4" fill="#3C8CCA" stroke="#FFFFFF" stroke-width="2"/>
+                                    <circle class="adv-chart-dot adv-chart-dot-mid" cx="285.7" cy="156.7" r="4" fill="#3C8CCA" stroke="#FFFFFF" stroke-width="2"/>
+                                    <circle class="adv-chart-dot adv-chart-dot-2" cx="380" cy="150.7" r="6" fill="#3C8CCA" stroke="#FFFFFF" stroke-width="2"/>
+                                    <circle class="adv-chart-dot adv-chart-dot-3" cx="560" cy="50.6" r="7" fill="#E8B923" stroke="#FFFFFF" stroke-width="2"/>
+                                    <text class="adv-chart-label adv-chart-label-1" x="50" y="184" text-anchor="middle" font-family="Poppins, sans-serif" font-size="12" font-weight="600" fill="#144571">149</text>
+                                    <text class="adv-chart-label adv-chart-label-2 adv-chart-today" x="380" y="140" text-anchor="middle" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#144571">558</text>
+                                    <text class="adv-chart-label adv-chart-label-3" x="560" y="42" text-anchor="end" font-family="Poppins, sans-serif" font-size="15" font-weight="700" fill="#B8860B">&#8776;1,500</text>
+                                    <text class="adv-chart-label adv-chart-label-3" x="500" y="86" text-anchor="middle" font-family="Poppins, sans-serif" font-size="11" font-style="italic" fill="#7C93A8">anticipated</text>
+                                    <text class="adv-chart-axislabel" x="50" y="232" text-anchor="start" font-family="Poppins, sans-serif" font-size="11" fill="#94A3B8">Launched 24 May</text>
+                                    <text class="adv-chart-axislabel" x="380" y="232" text-anchor="middle" font-family="Poppins, sans-serif" font-size="11" fill="#94A3B8">today</text>
+                                    <text class="adv-chart-axislabel" x="560" y="232" text-anchor="end" font-family="Poppins, sans-serif" font-size="11" fill="#B8860B">The Worlds &middot; 15 Aug</text>
+                                </svg>
+                            </div>
+                            <p class="adv-chart-note">Active players since launch. The dashed line is a projection, not recorded figures.</p>
+                        </div>
+                        <!-- Stat stack -->
+                        <div class="adv-stat-stack">
+                            <div class="adv-stat adv-stat--store">
+                                <img class="adv-stat-badge" src="/assets/img/badges/app-store.svg" alt="Download on the App Store">
+                                <div>
+                                    <span class="adv-stat-num">500<span class="adv-plus">+</span></span>
+                                    <span class="adv-stat-label">downloads</span>
+                                </div>
+                            </div>
+                            <div class="adv-stat">
+                                <span class="adv-stat-num"><span class="adv-stat-live">558</span><span class="adv-plus">+</span></span>
+                                <span class="adv-stat-label">active players, and climbing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-sociallinks">
+                        <a class="adv-sociallink" href="https://www.facebook.com/share/1Ahcf8599T/?mibextid=wwXIfr" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            <span>Follow on Facebook</span>
+                        </a>
+                        <a class="adv-sociallink" href="https://open.spotify.com/episode/0pBhUb68tSGRvL0nNBCpLX" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+                            <span>Featured on <span class="adv-sociallink-meta">The Big Rab Show Podcast</span></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why this audience -->
+            <section class="section fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">Why it works</span>
+                    <h2 class="section-heading">The right people, the right moment</h2>
+                    <div class="adv-grid">
+                        <div class="adv-card reveal-scale">
+                            <div class="adv-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <h3>An audience that's in it</h3>
+                            <p>Pipers, drummers, bands, families and fans who follow the season, travel to contests, and spend on the sport.</p>
+                        </div>
+                        <div class="adv-card reveal-scale">
+                            <div class="adv-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                            </div>
+                            <h3>Peak attention, on cue</h3>
+                            <p>Interest spikes around each major and peaks at the Worlds. You reach people in the days they're paying closest attention.</p>
+                        </div>
+                        <div class="adv-card reveal-scale">
+                            <div class="adv-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 15 9l7 .5-5.5 4.5L19 21l-7-4-7 4 1.5-7L1 9.5 8 9z"/></svg>
+                            </div>
+                            <h3>One sponsor, no clutter</h3>
+                            <p>A single sponsor holds each window. No competing brands, no wall of ads - your name stands on its own.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Who it's for -->
+            <section class="section adv-soft fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">Who it's for</span>
+                    <h2 class="section-heading">Brands with a natural place in piping</h2>
+                    <div class="adv-grid">
+                        <div class="adv-card">
+                            <h3>Host-town businesses</h3>
+                            <p>Hotels, B&amp;Bs, cafes, pubs and highlandwear shops where the crowds arrive for championship weekend.</p>
+                        </div>
+                        <div class="adv-card">
+                            <h3>The piping trade</h3>
+                            <p>Reed, pipe and instrument makers, retailers, music schools and tuition.</p>
+                        </div>
+                        <div class="adv-card">
+                            <h3>Games &amp; piping tourism</h3>
+                            <p>Highland-games organisers, gatherings, and travel aimed at the piping audience.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sponsorship options -->
+            <section class="section fade-in" id="options">
+                <div class="container">
+                    <span class="adv-eyebrow">Sponsorship options</span>
+                    <h2 class="section-heading">Sponsor a town, a season, or the Worlds</h2>
+                    <p class="adv-section-intro">Two easy choices, and we quote to fit - so it works just as well for a single host-town shop as for a national brand.</p>
+                    <div class="adv-choices">
+                        <div class="adv-choice">
+                            <span class="adv-choice-num">1</span>
+                            <span class="adv-choice-label">Which window</span>
+                            <p class="adv-choice-lead">How long your brand runs.</p>
+                            <p class="adv-choice-range">A single major, the run of the season, or the Worlds - the three below.</p>
+                        </div>
+                        <div class="adv-choice">
+                            <span class="adv-choice-num">2</span>
+                            <span class="adv-choice-label">How far</span>
+                            <p class="adv-choice-lead">How deeply it's built in.</p>
+                            <p class="adv-choice-range">From a simple spotlight - a logo, one line and one link - to a bespoke placement built into the app.</p>
+                        </div>
+                    </div>
+                    <div class="adv-tiers">
+                        <div class="adv-tier adv-tier--bronze reveal-scale">
+                            <span class="adv-tier-name">Host-Town Spotlight</span>
+                            <h3>One championship window</h3>
+                            <p class="adv-tier-for">For local businesses near a host town.</p>
+                            <ul class="adv-tier-list">
+                                <li>The in-app spotlight for one major's window</li>
+                                <li>Sole sponsor for that window</li>
+                            </ul>
+                            <a href="#contact" class="adv-btn adv-btn-ghost btn-block">Enquire</a>
+                        </div>
+                        <div class="adv-tier adv-tier--silver reveal-scale">
+                            <span class="adv-tier-name">Season Series</span>
+                            <h3>The run of majors</h3>
+                            <p class="adv-tier-for">For brands that want the whole season.</p>
+                            <ul class="adv-tier-list">
+                                <li>The spotlight at every major up to the Worlds</li>
+                                <li>Category exclusivity all season</li>
+                            </ul>
+                            <a href="#contact" class="adv-btn adv-btn-ghost btn-block">Enquire</a>
+                        </div>
+                        <div class="adv-tier adv-tier--gold reveal-scale">
+                            <span class="adv-tier-flag">Flagship</span>
+                            <span class="adv-tier-name">The Worlds</span>
+                            <h3>Glasgow, August</h3>
+                            <p class="adv-tier-for">The biggest day of the season, on its own.</p>
+                            <ul class="adv-tier-list">
+                                <li>The spotlight for the Worlds window</li>
+                                <li>Sole sponsor of the season's biggest moment</li>
+                            </ul>
+                            <a href="#contact" class="adv-btn adv-btn-gold btn-block">Ask about the Worlds</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Where your brand appears (placement mockups) -->
+            <section class="section adv-soft fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">In the app</span>
+                    <h2 class="section-heading">Where your brand appears</h2>
+                    <p class="adv-section-intro">Choose how visible you want to be - from a calm in-app banner to your brand the moment the app opens. Pick an option to see how it looks.</p>
+                    <div class="adv-pick" data-pick>
+                        <div class="adv-pick-tabs" role="tablist" aria-label="Placement options">
+                            <button type="button" class="adv-pick-tab is-active" role="tab" aria-selected="true" data-pick-tab="banner">
+                                <span class="adv-pick-tab-name">Home banner</span>
+                                <span class="adv-pick-tab-desc">A calm inline banner on the home screen.</span>
+                                <span class="adv-pick-tab-progress" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="adv-pick-tab" role="tab" aria-selected="false" data-pick-tab="predictions">
+                                <span class="adv-pick-tab-name">Predictions spotlight</span>
+                                <span class="adv-pick-tab-desc">A brief moment as players submit or review their picks.</span>
+                                <span class="adv-pick-tab-progress" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="adv-pick-tab" role="tab" aria-selected="false" data-pick-tab="splash">
+                                <span class="adv-pick-tab-name">Launch splash</span>
+                                <span class="adv-pick-tab-desc">Your brand the moment the app opens.</span>
+                                <span class="adv-pick-tab-progress" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="adv-pick-stage">
+                            <!-- Home banner -->
+                            <div class="adv-pick-panel is-active" data-pick-panel="banner">
+                                <div class="adv-mock-stage" role="img" aria-label="Illustrative: a sponsor banner on the home screen">
+                                    <img src="/assets/img/screenshots/home.png" alt="">
+                                    <div class="adv-mock-banner">
+                                        <span class="adv-mock-tag">Sponsor</span>
+                                        <span class="adv-mock-logo" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 H17.5 L16 20.5 H8 Z"/><path d="M6.9 8 H17.1"/><path d="M13.8 11 L13.4 16.5"/></svg>
+                                        </span>
+                                        <span class="adv-mock-sponsor">The Piper's Rest</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Predictions spotlight -->
+                            <div class="adv-pick-panel" data-pick-panel="predictions">
+                                <div class="adv-mock-stage" role="img" aria-label="Illustrative: a sponsor spotlight as players review their predictions">
+                                    <img src="/assets/img/screenshots/predictions.png" alt="">
+                                    <div class="adv-mock-screen">
+                                        <div class="adv-mock-scrim"></div>
+                                        <div class="adv-mock-modal">
+                                            <span class="adv-mock-tag">Spotlight</span>
+                                            <span class="adv-mock-modal-logo" aria-hidden="true">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 H17.5 L16 20.5 H8 Z"/><path d="M6.9 8 H17.1"/><path d="M13.8 11 L13.4 16.5"/></svg>
+                                            </span>
+                                            <span class="adv-mock-modal-name">The Piper's Rest</span>
+                                            <span class="adv-mock-modal-line">Craft ales and a warm welcome after the games.</span>
+                                            <span class="adv-mock-pill-gold">Visit sponsor</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Launch splash -->
+                            <div class="adv-pick-panel" data-pick-panel="splash">
+                                <div class="adv-mock-stage" role="img" aria-label="Illustrative: the launch screen the moment the app opens">
+                                    <img src="/assets/img/screenshots/home.png" alt="">
+                                    <div class="adv-mock-screen">
+                                        <div class="adv-mock-splash">
+                                            <span class="adv-mock-tag">Sponsor</span>
+                                            <span class="adv-mock-splash-mark" aria-hidden="true">
+                                                <img src="/assets/img/icons/icon.png" alt="">
+                                            </span>
+                                            <span class="adv-mock-splash-name">Pipe Band Predictor</span>
+                                            <span class="adv-mock-splash-partner">In partnership with</span>
+                                            <span class="adv-mock-splash-logo">
+                                                <span class="adv-mock-splash-glass" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5 H17.5 L16 20.5 H8 Z"/><path d="M6.9 8 H17.1"/><path d="M13.8 11 L13.4 16.5"/></svg>
+                                                </span>
+                                                The Piper's Rest
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-studio reveal-scale">
+                        <div class="adv-studio-head">
+                            <span class="adv-studio-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+                            </span>
+                            <span class="adv-studio-eyebrow">Built in-house</span>
+                        </div>
+                        <strong class="adv-studio-title">We built the app, so we can build around you</strong>
+                        <p>These are examples. Because Predictor is designed and run in-house by <a href="/about.html">the team at Surface Development</a>, you're not limited to a fixed slot. A simple logo, line and link is the easy default - and from there we can craft a bespoke placement woven into the heart of the app. If you have an idea, we can probably build it.</p>
+                    </div>
+                    <p class="adv-mock-foot"><a href="#options">See the tiers</a> or <a href="#contact">enquire</a>.</p>
+                </div>
+            </section>
+
+            <!-- Season windows -->
+            <section class="section fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">The season</span>
+                    <h2 class="section-heading">The road to the Worlds</h2>
+                    <p class="adv-section-intro">The summer majors, the Worlds in Glasgow, and the autumn solos. Each round is its own sponsorship window.</p>
+                    <ul class="adv-journey">
+                        <li class="adv-stop adv-stop--past" data-end="2026-05-30">
+                            <div>
+                                <span class="adv-stop-date">30 May 2026</span>
+                                <div class="adv-stop-name">British Championships</div>
+                                <div class="adv-stop-place">Pipe bands &middot; Ingliston, Edinburgh</div>
+                            </div>
+                            <span class="adv-stop-tag">Just passed</span>
+                        </li>
+                        <li class="adv-stop" data-end="2026-06-13">
+                            <div>
+                                <span class="adv-stop-date">13 June 2026</span>
+                                <div class="adv-stop-name">UK Championships</div>
+                                <div class="adv-stop-place">Pipe bands &middot; Belfast</div>
+                                <div class="adv-stop-stat">
+                                    <span class="adv-stop-metric"><strong>76</strong> bands</span>
+                                    <span class="adv-stop-year">2024</span>
+                                </div>
+                            </div>
+                            <span class="adv-stop-tag">Open</span>
+                        </li>
+                        <li class="adv-stop" data-end="2026-06-27">
+                            <div>
+                                <span class="adv-stop-date">27 June 2026</span>
+                                <div class="adv-stop-name">European Championships</div>
+                                <div class="adv-stop-place">Pipe bands &middot; Perth</div>
+                                <div class="adv-stop-stat">
+                                    <span class="adv-stop-metric"><strong>~140</strong> bands</span>
+                                    <span class="adv-stop-year">2025</span>
+                                </div>
+                            </div>
+                            <span class="adv-stop-tag">Open</span>
+                        </li>
+                        <li class="adv-stop" data-end="2026-07-25">
+                            <div>
+                                <span class="adv-stop-date">25 July 2026</span>
+                                <div class="adv-stop-name">Scottish Championships</div>
+                                <div class="adv-stop-place">Pipe bands &middot; Dumbarton</div>
+                                <div class="adv-stop-stat">
+                                    <span class="adv-stop-metric"><strong>127</strong> bands</span>
+                                    <span class="adv-stop-year">2025</span>
+                                </div>
+                            </div>
+                            <span class="adv-stop-tag">Open</span>
+                        </li>
+                        <li class="adv-stop" data-end="2026-08-10">
+                            <div>
+                                <span class="adv-stop-date">10 August 2026</span>
+                                <div class="adv-stop-name">British Solo Drumming</div>
+                                <div class="adv-stop-place">Solo drumming</div>
+                            </div>
+                            <span class="adv-stop-tag">Open</span>
+                        </li>
+                        <li class="adv-stop adv-stop--worlds" data-end="2026-08-15">
+                            <div>
+                                <span class="adv-stop-date">15 August 2026</span>
+                                <div class="adv-stop-name">The World Championships</div>
+                                <div class="adv-stop-place">Pipe bands &middot; Glasgow Green</div>
+                                <div class="adv-stop-stat">
+                                    <span class="adv-stop-metric"><strong>207</strong> bands</span>
+                                    <span class="adv-stop-metric"><strong>15</strong> nations</span>
+                                    <span class="adv-stop-year">2025</span>
+                                </div>
+                            </div>
+                            <span class="adv-stop-tag">Flagship</span>
+                        </li>
+                        <li class="adv-stop" data-end="2026-10-17">
+                            <div>
+                                <span class="adv-stop-date">17 October 2026</span>
+                                <div class="adv-stop-name">World Solo Drumming</div>
+                                <div class="adv-stop-place">Solo drumming</div>
+                            </div>
+                            <span class="adv-stop-tag">Open</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- The world you'd be part of -->
+            <section class="section fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">The scene</span>
+                    <h2 class="section-heading">The world you'd be part of</h2>
+                    <p class="adv-section-intro">Pipe band competition is a global sport with a Scottish home. Bands of pipers and drummers compete in grades through the RSPBA majors to the World Championships at Glasgow Green every August. It's a tight-knit, year-round following across Scotland, Ireland, Canada, the USA, Australia and New Zealand - hard to reach through general channels, and rewarding to reach directly.</p>
+                    <div class="adv-eventscale">
+                        <p class="adv-eventscale-label">The Worlds, in numbers</p>
+                        <div class="adv-eventscale-grid">
+                            <div>
+                                <div class="adv-eventscale-num">7,000<span>+</span></div>
+                                <p class="adv-eventscale-cap">competing pipers and drummers</p>
+                            </div>
+                            <div>
+                                <div class="adv-eventscale-num">200<span>+</span></div>
+                                <p class="adv-eventscale-cap">bands worldwide</p>
+                            </div>
+                            <div>
+                                <div class="adv-eventscale-num">15<span>+</span></div>
+                                <p class="adv-eventscale-cap">nations represented</p>
+                            </div>
+                            <div>
+                                <div class="adv-eventscale-num">35,000<span>+</span></div>
+                                <p class="adv-eventscale-cap">spectators on the day</p>
+                            </div>
+                        </div>
+                        <p class="adv-eventscale-foot">Glasgow Green. Figures from the 2025 event.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Founding sponsor -->
+            <section class="section fade-in">
+                <div class="container">
+                    <div class="adv-founding">
+                        <span class="adv-eyebrow" style="color:#FACC15">Founding sponsors</span>
+                        <h2>Join the inaugural roster</h2>
+                        <p>We're new, independent, and built by people who follow the season. We're taking on a small first roster of sponsors and want to grow with them.</p>
+                        <ul class="adv-founding-list">
+                            <li>Intro pricing for your first season</li>
+                            <li>First refusal to renew at the same rate</li>
+                            <li>Locked category exclusivity</li>
+                            <li>Founding-sponsor credit</li>
+                        </ul>
+                        <a href="#contact" class="adv-btn adv-btn-gold">Become a founding sponsor</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our promise -->
+            <section class="section adv-soft fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">Our promise</span>
+                    <h2 class="section-heading">How we look after the app and its community</h2>
+                    <div class="adv-promise-grid">
+                        <div class="adv-promise">
+                            <span class="adv-promise-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </span>
+                            <div>
+                                <h3>Independent of the championships</h3>
+                                <p>Pipe Band Predictor is not affiliated with or endorsed by the RSPBA or the championships. A sponsor isn't an official partner of the events, and never appears backing a band or a result.</p>
+                            </div>
+                        </div>
+                        <div class="adv-promise">
+                            <span class="adv-promise-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/></svg>
+                            </span>
+                            <div>
+                                <h3>Calm and clearly marked</h3>
+                                <p>No pop-ups, no autoplay video. A clearly-marked spotlight that sits quietly in the app.</p>
+                            </div>
+                        </div>
+                        <div class="adv-promise">
+                            <span class="adv-promise-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>
+                            </span>
+                            <div>
+                                <h3>A high bar for fit</h3>
+                                <p>A handful of sponsors the piping world will welcome - brands and businesses with a genuine place in it. No betting.</p>
+                            </div>
+                        </div>
+                        <div class="adv-promise">
+                            <span class="adv-promise-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                            </span>
+                            <div>
+                                <h3>Players' data stays private</h3>
+                                <p>We never sell or share players' personal data with sponsors. A spotlight is shown by context, not by tracking people. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How it works -->
+            <section class="section fade-in">
+                <div class="container">
+                    <span class="adv-eyebrow">How it works</span>
+                    <h2 class="section-heading">Simple to get started</h2>
+                    <div class="adv-steps">
+                        <div class="adv-step">
+                            <h3>Get in touch</h3>
+                            <p>Tell us which major or window fits.</p>
+                        </div>
+                        <div class="adv-step">
+                            <h3>Agree the window</h3>
+                            <p>We confirm the dates and a fair price.</p>
+                        </div>
+                        <div class="adv-step">
+                            <h3>Send your brand</h3>
+                            <p>A logo, one line and link - or something more bespoke.</p>
+                        </div>
+                        <div class="adv-step">
+                            <h3>You're live</h3>
+                            <p>Your spotlight runs, and we send a recap after.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing posture -->
+            <section class="section fade-in">
+                <div class="container">
+                    <div class="adv-pricing">
+                        <span class="adv-eyebrow">Pricing</span>
+                        <h2 class="section-heading">Priced to the window, not a rate card</h2>
+                        <p>A host-town hotel and a national reed maker want different things, so we quote per enquiry rather than sell a package you don't need. Community sponsorship, not stadium advertising.</p>
+                        <p class="adv-price-cue">Founding sponsors get intro rates. Tell us what you have in mind.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="section fade-in" id="contact">
+                <div class="container">
+                    <div class="adv-pricing">
+                        <span class="adv-eyebrow">Get in touch</span>
+                        <h2 class="section-heading">Start a conversation</h2>
+                        <p>Tell us about your business and which window interests you. We'll reply with something honest and specific.</p>
+                    </div>
+                    <div class="adv-contact-cta">
+                        <a class="adv-btn adv-btn-primary" href="mailto:{{ site.supportEmail }}?subject=Sponsorship%20enquiry%20-%20Pipe%20Band%20Predictor&body=Hi%2C%0D%0A%0D%0AI%27d%20like%20to%20talk%20about%20sponsoring%20Pipe%20Band%20Predictor.%0D%0A%0D%0ABusiness%20or%20brand%3A%0D%0AWhich%20window%20%28one%20major%20%2F%20the%20season%20%2F%20the%20Worlds%29%3A%0D%0AAnything%20else%3A%0D%0A">Email us about sponsorship</a>
+                        <p class="adv-form-note">Or write to <a href="mailto:{{ site.supportEmail }}">{{ site.supportEmail }}</a> directly. We reply within two working days.</p>
+                    </div>
+                </div>
+            </section>
+</div>
+
+{% block extraScripts %}
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+{% raw %}
+    <script>
+        const advParseRoundEnd = (value) => new Date(value + 'T23:59:59');
+
+        const advMarkPastRounds = () => {
+            const now = new Date();
+            document.querySelectorAll('.adv-stop[data-end]').forEach((stop) => {
+                const ended = advParseRoundEnd(stop.dataset.end);
+                if (ended.getTime() < now.getTime()) {
+                    stop.classList.add('adv-stop--past');
+                    const tag = stop.querySelector('.adv-stop-tag');
+                    if (tag && tag.textContent.trim() === 'Open') {
+                        tag.textContent = 'Passed';
+                    }
+                }
+            });
+        };
+
+        advMarkPastRounds();
+
+        /* ── Live "today" projection + growth-chart draw-in ──────── */
+        const advPrefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* Real figures: 149 active players at launch (24 May 2026)
+           rising to 558 on 31 May 2026 - about 4x in seven days.
+           The derived daily growth factor is (558/149)^(1/7). */
+        const advBaselineCount = 558;
+        const advDailyGrowthFactor = Math.pow(558 / 149, 1 / 7);
+        const advProjectionBaseTime = new Date('2026-05-31T00:00:00').getTime();
+        const advMillisPerDay = 24 * 60 * 60 * 1000;
+
+        const advProjectedCount = (atTime) => {
+            const fractionalDaysSinceBase = (atTime - advProjectionBaseTime) / advMillisPerDay;
+            const projected = advBaselineCount * Math.pow(advDailyGrowthFactor, fractionalDaysSinceBase);
+            return Math.max(advBaselineCount, Math.round(projected));
+        };
+
+        const advTodayLabel = document.querySelector('.adv-chart-today');
+        const advLiveStat = document.querySelector('.adv-stat-live');
+
+        const advFormatCount = (count) => count.toLocaleString('en-GB');
+
+        const advRenderLiveCount = (count) => {
+            const formatted = advFormatCount(count);
+            if (advTodayLabel) {
+                advTodayLabel.textContent = formatted;
+            }
+            if (advLiveStat) {
+                advLiveStat.textContent = formatted;
+            }
+        };
+
+        /* Gentle real-time tick: re-derive from the current clock every
+           few seconds so the figure keeps pace with the ~20.8%/day rate. */
+        const advStartLiveTicker = () => {
+            const advTickIntervalMs = 4000;
+            window.setInterval(() => {
+                advRenderLiveCount(advProjectedCount(Date.now()));
+            }, advTickIntervalMs);
+        };
+
+        /* Count up from the launch figure to the live projection. Runs in step
+           with the line drawing so the number climbs at the head of the line,
+           landing on the live figure as the line reaches the today point. The
+           count starts low (149) so it visibly climbs through the real week. */
+        const advCountUpToLive = (targetCount, countUpDurationMs) => {
+            if (advPrefersReducedMotion) {
+                advRenderLiveCount(targetCount);
+                advStartLiveTicker();
+                return;
+            }
+            const startCount = 149;
+            const durationMs = countUpDurationMs || 1100;
+            let animationStartTime = null;
+
+            const advStep = (timestamp) => {
+                if (animationStartTime === null) {
+                    animationStartTime = timestamp;
+                }
+                const elapsed = timestamp - animationStartTime;
+                const progress = Math.min(1, elapsed / durationMs);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(startCount + (targetCount - startCount) * eased);
+                advRenderLiveCount(current);
+                if (progress < 1) {
+                    window.requestAnimationFrame(advStep);
+                    return;
+                }
+                advStartLiveTicker();
+            };
+
+            window.requestAnimationFrame(advStep);
+        };
+
+        const advSolidDrawDurationMs = 1200;
+
+        /* Each real point keyed to the fraction of the solid line drawn when the
+           head reaches it (launch 0, 279 ~0.43, 465 ~0.72, today 1.0), so its dot
+           and any label pop in just as the line arrives. */
+        const advPointReveals = [
+            { selector: '.adv-chart-dot-1, .adv-chart-label-1, .adv-chart-axislabel', fraction: 0 },
+            { selector: '.adv-chart-dot-mid', fraction: 0.43, index: 0 },
+            { selector: '.adv-chart-dot-mid', fraction: 0.72, index: 1 },
+            { selector: '.adv-chart-dot-2, .adv-chart-label-2', fraction: 1 }
+        ];
+
+        const advPopElements = (chartCard, selector, singleIndex) => {
+            const matches = chartCard.querySelectorAll(selector);
+            if (typeof singleIndex === 'number') {
+                const target = matches[singleIndex];
+                if (target) {
+                    target.classList.add('adv-chart-pop');
+                }
+                return;
+            }
+            matches.forEach((element) => {
+                element.classList.add('adv-chart-pop');
+            });
+        };
+
+        /* Land the chart in its complete drawn state immediately, with no
+           transitions - used for reduced-motion and as the safety fallback
+           so the chart is never left half-hidden. */
+        const advShowChartFinalState = (chartCard) => {
+            const solidLine = chartCard.querySelector('.adv-chart-line');
+            if (solidLine) {
+                solidLine.style.transition = 'none';
+                solidLine.style.strokeDasharray = 'none';
+                solidLine.style.strokeDashoffset = '0';
+            }
+            chartCard.querySelectorAll('.adv-chart-dashed').forEach((dashedPath) => {
+                dashedPath.style.transition = 'none';
+                dashedPath.style.opacity = '0.55';
+            });
+            chartCard.classList.add('adv-chart-drawn');
+            advCountUpToLive(advProjectedCount(Date.now()));
+        };
+
+        const advAnimateChart = (chartCard) => {
+            if (advPrefersReducedMotion) {
+                advShowChartFinalState(chartCard);
+                return;
+            }
+
+            const solidLine = chartCard.querySelector('.adv-chart-line');
+            const dashedSegments = chartCard.querySelectorAll('.adv-chart-dashed');
+            const areaFill = chartCard.querySelector('.adv-chart-area');
+
+            if (areaFill) {
+                /* The area grows in alongside the line drawing. */
+                areaFill.style.transition = 'opacity ' + advSolidDrawDurationMs + 'ms var(--ease-out)';
+                window.requestAnimationFrame(() => {
+                    areaFill.style.opacity = '1';
+                });
+            }
+
+            const advStartDraw = () => {
+                if (solidLine) {
+                    solidLine.style.transition = 'stroke-dashoffset ' + advSolidDrawDurationMs + 'ms var(--ease-out)';
+                    solidLine.style.strokeDashoffset = '0';
+                }
+
+                /* Count the head figure up in lockstep with the line drawing. */
+                advCountUpToLive(advProjectedCount(Date.now()), advSolidDrawDurationMs);
+
+                /* Pop each real point in as the drawing head reaches it. */
+                advPointReveals.forEach((reveal) => {
+                    window.setTimeout(() => {
+                        advPopElements(chartCard, reveal.selector, reveal.index);
+                    }, reveal.fraction * advSolidDrawDurationMs);
+                });
+
+                /* Once the solid line is drawn, the dashed projection fades in,
+                   then the Worlds endpoint pops at the head of the curve. */
+                dashedSegments.forEach((dashedPath, segmentIndex) => {
+                    dashedPath.style.opacity = '0';
+                    window.setTimeout(() => {
+                        dashedPath.style.opacity = '0.55';
+                    }, advSolidDrawDurationMs + segmentIndex * 160);
+                });
+
+                window.setTimeout(() => {
+                    advPopElements(chartCard, '.adv-chart-dot-3, .adv-chart-label-3');
+                    chartCard.classList.add('adv-chart-drawn');
+                }, advSolidDrawDurationMs + dashedSegments.length * 160 + 200);
+            };
+
+            if (solidLine) {
+                const lineLength = solidLine.getTotalLength();
+                solidLine.style.transition = 'none';
+                solidLine.style.strokeDasharray = lineLength + ' ' + lineLength;
+                solidLine.style.strokeDashoffset = lineLength;
+                /* Force a reflow so the starting offset is committed, then a
+                   double rAF before starting the draw - a single frame can get
+                   batched with the initial assignment and snap instead. */
+                solidLine.getBoundingClientRect();
+                window.requestAnimationFrame(() => {
+                    window.requestAnimationFrame(advStartDraw);
+                });
+            } else {
+                advStartDraw();
+            }
+        };
+
+        const advChartCard = document.querySelector('.adv-chart-card');
+
+        if (advChartCard) {
+            /* Arm the card so the draw-in elements start hidden. If the script
+               below never runs the elements stay visible (the hiding rules only
+               apply while .adv-chart-armed is present). */
+            advChartCard.classList.add('adv-chart-armed');
+
+            if (advPrefersReducedMotion) {
+                advShowChartFinalState(advChartCard);
+            } else {
+                let advChartHasAnimated = false;
+                const advRunChartOnce = () => {
+                    if (advChartHasAnimated) {
+                        return;
+                    }
+                    advChartHasAnimated = true;
+                    advAnimateChart(advChartCard);
+                };
+
+                const advChartIsInViewport = () => {
+                    const bounds = advChartCard.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+                    return bounds.top < viewportHeight && bounds.bottom > 0;
+                };
+
+                if ('IntersectionObserver' in window) {
+                    const advChartObserver = new IntersectionObserver(
+                        (entries, observerInstance) => {
+                            entries.forEach((entry) => {
+                                if (entry.isIntersecting) {
+                                    advRunChartOnce();
+                                    observerInstance.unobserve(entry.target);
+                                }
+                            });
+                        },
+                        /* A low threshold plus a negative bottom margin fires for a
+                           chart already on screen at load and for one scrolled to. */
+                        { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+                    );
+                    advChartObserver.observe(advChartCard);
+
+                    /* Safety net: if the chart is on screen but the observer has not
+                       fired within a second (already-visible edge cases, layout
+                       quirks), draw anyway so it is never left half-hidden. A chart
+                       still below the fold is left to the observer. */
+                    window.setTimeout(() => {
+                        if (!advChartHasAnimated && advChartIsInViewport()) {
+                            advRunChartOnce();
+                        }
+                    }, 1000);
+                } else {
+                    /* No observer support: reveal the full chart up front. */
+                    advShowChartFinalState(advChartCard);
+                    advChartHasAnimated = true;
+                }
+            }
+        }
+    </script>
+    <script>
+        /* ── Scroll demo: pick → spotlight → result (full-bleed) ─────
+           A pinned, scroll-scrubbed takeover built on GSAP ScrollTrigger,
+           with Lenis driving smooth scroll. Three scenes scale and
+           cross-fade over a shifting background. Skipped entirely for
+           reduced motion or if the libraries fail to load, leaving the
+           section in its static beat-1 state (picks scene, first caption). */
+        const advInitScrollDemo = () => {
+            const section = document.querySelector('.adv-sd');
+            if (!section || !window.gsap || !window.ScrollTrigger) {
+                return;
+            }
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                return;
+            }
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            if (window.Lenis) {
+                const lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+                lenis.on('scroll', ScrollTrigger.update);
+                gsap.ticker.add((time) => lenis.raf(time * 1000));
+                gsap.ticker.lagSmoothing(0);
+            }
+
+            const stage = section.querySelector('.adv-sd-stage');
+            const bgPick = section.querySelector('.adv-sd-bg--1');
+            const bgSpot = section.querySelector('.adv-sd-bg--2');
+            const bgBoard = section.querySelector('.adv-sd-bg--3');
+            const picks = section.querySelectorAll('.adv-sd-pick');
+            const captions = section.querySelectorAll('.adv-sd-caption');
+            const dots = section.querySelectorAll('.adv-sd-dot');
+            const scenePredict = section.querySelector('.adv-sd-scene--predict');
+            const sceneSpot = section.querySelector('.adv-sd-scene--spot');
+            const sceneBoard = section.querySelector('.adv-sd-scene--board');
+            const rows = Array.from(section.querySelectorAll('.adv-sd-row'));
+            const youRow = section.querySelector('.adv-sd-row--you');
+            const youPts = youRow ? youRow.querySelector('.adv-sd-row-pts') : null;
+            const boardBody = section.querySelector('.adv-sd-board-body');
+
+            /* Read the slot height straight from the CSS custom property so the
+               climb distance matches the badge gutter exactly - getBoundingClientRect
+               would return a scaled value while the scene is mid-transition. As a
+               function with invalidateOnRefresh it also stays correct across the
+               responsive breakpoint. */
+            const rowHeight = () => {
+                const value = parseFloat(getComputedStyle(boardBody).getPropertyValue('--row-h'));
+                return Number.isFinite(value) ? value : 52;
+            };
+
+            gsap.set([bgSpot, bgBoard], { opacity: 0 });
+            gsap.set(bgPick, { opacity: 1 });
+            gsap.set(scenePredict, { opacity: 1, scale: 1, y: 0 });
+            gsap.set(sceneSpot, { opacity: 0, scale: 0.9, y: 24 });
+            gsap.set(sceneBoard, { opacity: 0, scale: 0.96 });
+            gsap.set(picks, { opacity: 0, y: 26 });
+            gsap.set(captions[0], { opacity: 1, y: 0 });
+            gsap.set([captions[1], captions[2]], { opacity: 0, y: 18 });
+
+            const pointsState = { value: youPts ? Number(youPts.dataset.from) : 0 };
+            const pointsTarget = youPts ? Number(youPts.dataset.to) : 0;
+
+            /* Light the dot for whichever caption is currently most visible, so
+               the indicator always tracks the live phase regardless of timing. */
+            const updateDots = () => {
+                let activeIndex = 0;
+                let highestOpacity = -1;
+                captions.forEach((caption, index) => {
+                    const opacity = Number(gsap.getProperty(caption, 'opacity'));
+                    if (opacity > highestOpacity) {
+                        highestOpacity = opacity;
+                        activeIndex = index;
+                    }
+                });
+                dots.forEach((dot, index) => dot.classList.toggle('is-active', index === activeIndex));
+            };
+
+            /* A higher scrub value lets the animation glide toward the scroll
+               position rather than tracking it 1:1, which softens the pin catch
+               and makes each phase flow into the next. */
+            const timeline = gsap.timeline({
+                defaults: { ease: 'power1.inOut' },
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top top',
+                    end: '+=2800',
+                    pin: stage,
+                    scrub: 1.5,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true,
+                    onUpdate: updateDots
+                }
+            });
+
+            /* Beat 1 — each team drops in on scroll, one after another */
+            timeline.to(picks, { opacity: 1, y: 0, stagger: 0.5, duration: 0.9, ease: 'back.out(1.4)' }, 0);
+
+            /* Beat 1 → 2 — picks recede as the spotlight rises and the sky darkens */
+            timeline.to(captions[0], { opacity: 0, y: -18, duration: 0.6 }, 2.6);
+            timeline.to(captions[1], { opacity: 1, y: 0, duration: 0.6 }, 3.0);
+            timeline.to(bgPick, { opacity: 0, duration: 1.1 }, 2.6);
+            timeline.to(bgSpot, { opacity: 1, duration: 1.1 }, 2.6);
+            timeline.to(scenePredict, { opacity: 0, scale: 0.82, y: -12, duration: 1.0 }, 2.7);
+            timeline.to(sceneSpot, { opacity: 1, scale: 1, y: 0, duration: 1.1, ease: 'back.out(1.2)' }, 2.9);
+
+            /* A gentle drift while the spotlight holds, so nothing sits dead still */
+            timeline.to(sceneSpot, { scale: 1.04, duration: 1.0, ease: 'sine.inOut' }, 4.1);
+
+            /* Beat 2 → 3 — spotlight lifts away, the board scales in, sky brightens */
+            timeline.to(captions[1], { opacity: 0, y: -18, duration: 0.6 }, 5.3);
+            timeline.to(captions[2], { opacity: 1, y: 0, duration: 0.6 }, 5.7);
+            timeline.to(bgSpot, { opacity: 0, duration: 1.1 }, 5.3);
+            timeline.to(bgBoard, { opacity: 1, duration: 1.1 }, 5.3);
+            timeline.to(sceneSpot, { opacity: 0, scale: 1.14, duration: 0.9 }, 5.3);
+            timeline.to(sceneBoard, { opacity: 1, scale: 1, duration: 1.0 }, 5.7);
+
+            /* Beat 3 — the climb: rows above shift down, your row rises to the top */
+            const climbAt = 6.5;
+            rows.forEach((row) => {
+                if (Number(row.dataset.start) < 4) {
+                    timeline.to(row, { y: () => rowHeight(), duration: 2.0, ease: 'power2.inOut' }, climbAt);
+                }
+            });
+            if (youRow) {
+                timeline.to(youRow, { y: () => -4 * rowHeight(), duration: 2.0, ease: 'power2.inOut' }, climbAt);
+            }
+            if (youPts) {
+                timeline.to(pointsState, {
+                    value: pointsTarget,
+                    duration: 2.0,
+                    ease: 'power1.out',
+                    onUpdate: () => { youPts.textContent = Math.round(pointsState.value); }
+                }, climbAt);
+            }
+
+            /* Tail hold so the sequence does not end the instant the board lands */
+            timeline.to({}, { duration: 0.8 }, 8.9);
+
+            updateDots();
+        };
+
+        window.addEventListener('load', advInitScrollDemo);
+    </script>
+    <script>
+        /* Placement explorer: tabs swap the mockup. It auto-advances every 10s
+           (the active tab's progress bar IS the timer); any click hands control
+           to the visitor and stops the carousel for good. */
+        (function () {
+            const picker = document.querySelector('[data-pick]');
+            if (!picker) {
+                return;
+            }
+            const tabs = Array.from(picker.querySelectorAll('[data-pick-tab]'));
+            const panels = picker.querySelectorAll('[data-pick-panel]');
+            if (tabs.length < 2) {
+                return;
+            }
+
+            const activate = (key) => {
+                tabs.forEach((tab) => {
+                    const isActive = tab.dataset.pickTab === key;
+                    tab.classList.toggle('is-active', isActive);
+                    tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+                panels.forEach((panel) => {
+                    panel.classList.toggle('is-active', panel.dataset.pickPanel === key);
+                });
+            };
+
+            const activeIndex = () => tabs.findIndex((tab) => tab.classList.contains('is-active'));
+
+            picker.addEventListener('animationend', (event) => {
+                if (event.animationName !== 'advPickProgress' || !picker.classList.contains('is-autoplay')) {
+                    return;
+                }
+                const next = (activeIndex() + 1) % tabs.length;
+                activate(tabs[next].dataset.pickTab);
+            });
+
+            tabs.forEach((tab) => {
+                tab.addEventListener('click', () => {
+                    picker.classList.remove('is-autoplay');
+                    activate(tab.dataset.pickTab);
+                });
+            });
+
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                picker.classList.add('is-autoplay');
+            }
+        })();
+    </script>
+{% endraw %}
+{% endblock %}

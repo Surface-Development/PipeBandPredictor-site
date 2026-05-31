@@ -208,28 +208,148 @@
    Schedule strip
    ============================================================ */
 
-.schedule {
+/* Season timeline rail (home schedule, driven by Sanity) */
+.cal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: var(--content-max);
+}
+.cal__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  padding: var(--space-lg) 0 var(--space-lg) var(--space-xl);
+  margin-left: 6px;
+  border-left: 2px solid var(--color-border);
+}
+.cal__item:first-child { border-top-left-radius: 2px; }
+.cal__dot {
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--color-bg);
+}
+.cal__date {
+  font-weight: var(--weight-bold);
+  color: var(--color-primary-deep);
+  font-size: 0.95rem;
+  line-height: 1.15;
+}
+.cal__year {
+  display: block;
+  margin-top: 2px;
+  font-weight: var(--weight-medium);
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+}
+.cal__body {
   display: flex;
-  gap: var(--space-md);
-  overflow-x: auto;
-  padding-bottom: var(--space-md);
-  scroll-snap-type: x mandatory;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
-.schedule__chip {
-  flex: 0 0 auto;
-  background: white;
+.cal__name { font-weight: var(--weight-semibold); color: var(--color-primary-ink); }
+.cal__star { color: var(--color-secondary); }
+.cal__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.cal__tag {
+  font-size: 0.7rem;
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-2);
+  color: var(--color-primary-hover);
+}
+.cal__tag--solo { background: #FBF1D6; color: #8A6D12; }
+.cal__status {
+  display: none;
+  font-size: 0.72rem;
+  font-weight: var(--weight-semibold);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: rgb(5 150 105 / 0.12);
+  color: #047857;
+}
+/* Only surfaced when predictions are actually open - the other states
+   (soon / locked / done) are implied by position and dimming. */
+.cal__item--open .cal__status { display: inline-block; }
+.cal__item--done { opacity: 0.55; }
+.cal__item--done .cal__dot { background: var(--color-text-subtle); }
+.cal__item--flagship .cal__dot {
+  background: var(--color-secondary);
+  box-shadow: 0 0 0 4px var(--color-bg), var(--shadow-glow-secondary);
+}
+.cal__item--flagship .cal__name { color: var(--color-primary-deep); }
+
+/* "Show previous rounds" toggle + collapsible past group */
+.cal__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin: 0 0 var(--space-md) 6px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary-hover);
+  background: var(--color-surface-2);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-md) var(--space-lg);
-  min-width: 180px;
-  scroll-snap-align: start;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background var(--duration) var(--ease-out), color var(--duration) var(--ease-out), border-color var(--duration) var(--ease-out);
 }
-.schedule__name { font-weight: var(--weight-semibold); color: var(--color-primary-ink); }
-.schedule__date { font-size: 0.875rem; color: var(--color-text-muted); margin-top: 2px; }
+.cal__toggle:hover {
+  background: white;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.cal__toggle-chev {
+  font-size: 0.7rem;
+  transition: transform var(--duration) var(--ease-out);
+}
+.cal:not(.is-collapsed) .cal__toggle-chev { transform: rotate(180deg); }
+.cal__previous {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.45s var(--ease-out);
+}
+.cal__previous-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+.cal.is-collapsed .cal__previous { grid-template-rows: 0fr; }
+.cal--no-anim .cal__previous { transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cal__previous,
+  .cal__toggle-chev { transition: none; }
+}
+
 .schedule__empty {
   color: var(--color-text-subtle);
   font-style: italic;
   padding: var(--space-lg);
+}
+
+@media (max-width: 480px) {
+  .cal__item {
+    grid-template-columns: 52px 1fr;
+    gap: var(--space-md);
+    padding-left: var(--space-lg);
+  }
 }
 
 /* ============================================================

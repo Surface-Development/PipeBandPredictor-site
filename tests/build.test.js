@@ -75,4 +75,26 @@ describe('Eleventy build', () => {
     expect(html).toContain('"@type": "SoftwareApplication"');
     expect(html).toContain('"installUrl": "https://apps.apple.com/app/id6758277252"');
   });
+
+  it('produces the sponsorship page with its hero and scroll demo', () => {
+    const path = '_site/sponsorship/index.html';
+    expect(existsSync(path)).toBe(true);
+    const html = readFileSync(path, 'utf-8');
+    expect(html).toContain('class="advertise"');
+    expect(html).toContain('Put your brand at the heart of the pipe band season');
+    expect(html).toContain('class="adv-sd"');
+  });
+
+  it('links to /sponsorship/ from the homepage and how-it-works', () => {
+    const home = readFileSync('_site/index.html', 'utf-8');
+    const howItWorks = readFileSync('_site/how-it-works/index.html', 'utf-8');
+    expect(home).toContain('href="/sponsorship/"');
+    expect(howItWorks).toContain('href="/sponsorship/"');
+  });
+
+  it('exposes Support and Sponsorship mailto links in the footer', () => {
+    const html = readFileSync('_site/index.html', 'utf-8');
+    expect(html).toContain('mailto:support@surfacedevelopment.co.uk"');
+    expect(html).toContain('mailto:support@surfacedevelopment.co.uk?subject=Sponsorship%20enquiry%20-%20Pipe%20Band%20Predictor');
+  });
 });
