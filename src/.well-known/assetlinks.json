@@ -5,8 +5,7 @@
       "namespace": "android_app",
       "package_name": "com.pipebandpredictor.app",
       "sha256_cert_fingerprints": [
-        "REPLACE_WITH_UPLOAD_KEY_SHA256",
-        "REPLACE_WITH_APP_SIGNING_KEY_SHA256"
+        "4F:CD:BA:F0:60:7C:04:6F:4E:7E:BD:0C:69:B9:6E:E6:7F:31:D3:B2:18:28:5E:13:5E:88:52:5C:9C:FD:C5:68"
       ]
     }
   }

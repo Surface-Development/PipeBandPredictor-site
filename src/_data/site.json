@@ -10,8 +10,8 @@
   "appStore": {
     "ios": "https://apps.apple.com/app/id6758277252",
     "iosAvailable": true,
-    "android": null,
-    "androidAvailable": false
+    "android": "https://play.google.com/store/apps/details?id=com.pipebandpredictor.app",
+    "androidAvailable": true
   },
   "ogImage": "/assets/img/og/pipe-band-predictor.png",
   "cloudflareAnalyticsToken": ""
